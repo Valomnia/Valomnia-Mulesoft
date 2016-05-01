@@ -1,0 +1,5 @@
+= Valomnia Connector  Valomnia, connector
+
+*Community*
+
+Anypoint Connector for Valomnia provides integration with Valomnia FieldTouch through a Rest API
