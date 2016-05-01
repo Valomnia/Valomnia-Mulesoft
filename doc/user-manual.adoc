@@ -76,7 +76,7 @@ image::valomnia connector.png[Connector Configuration, 500]
 
 a. For Valomnia Connector: Configuration:
 +
-image::Configuration.png[Global Configuration,500]
+image::Configuration.PNG[Global Configuration,500]
 +
 [width="100%", options="header"]
 ====
@@ -123,7 +123,7 @@ image::FindItemsConfig.png[Connector Parameters, 500]
 
 Create a Mule flow to get Items from the Valomnia account.
 
-image::getItemsflow.png[Demo Flow, 500]
+image::getItemsflow.PNG[Demo Flow, 500]
 
 . Create a Mule project in your Anypoint Studio.
 . Drag an HTTP connector into the canvas, then select it to open the properties editor console.
