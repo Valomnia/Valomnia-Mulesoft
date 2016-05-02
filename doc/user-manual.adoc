@@ -80,7 +80,7 @@ image::ChooseGlobalType.png[Connector Configuration, 500]
 
 a. For Valomnia Connector: Configuration:
 +
-image::DemoGloablElement.png[Global Configuration, 500]
+image::configuration.png[Global Configuration, 500]
 +
 [width="100%", options="header"]
 |=======
