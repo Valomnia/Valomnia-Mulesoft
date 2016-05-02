@@ -85,7 +85,6 @@ image::Configuration.PNG[Global Configuration, 500]
 [width="100%", options="header"]
 |=======
 |Field|Description
-|Name|Alphanumeric text string that uniquely identifies the user who owns the account
 |Username|Key that plays the role of a username
 |Password|Key that plays the role of a password
 |baseUrl|Valomnia  BaseUrl reference.=======
