@@ -87,7 +87,8 @@ image::Configuration.PNG[Global Configuration, 500]
 |Field|Description
 |Username|Key that plays the role of a username
 |Password|Key that plays the role of a password
-|baseUrl|Valomnia  BaseUrl reference.  =======
+|baseUrl|Valomnia  BaseUrl reference.
+|=======
 +
 [NOTE]
 ====
