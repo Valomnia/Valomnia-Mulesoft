@@ -73,7 +73,7 @@ To create a global Valomnia configuration:
 2.  On the Global Mule Configuration Elements screen, click *Create*.
 3.  In the *Choose Global Type* wizard, expand *Connector Configuration*, and then select *Valomnia Connector: configuration (Signature)*.
 +
-image::ChooseGlobalType.png[Connector Configuration, 500]
+image::valomnia.PNG[Connector Configuration, 500]
 +
 4.  Click *OK*.
 5.  Enter the global element properties:
