@@ -1,4 +1,4 @@
-﻿= Valomnia Connector 1.0
+﻿= Valomnia Connector 3.0
 
 :toc: macro
 :toc-title: Contents:
@@ -11,11 +11,9 @@
 
 [green]#Community#
 
-The Valomnia Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account . 
+The PayPal Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account 
 
-toc::[]
-
-=== Prerequisites 
+=== Prerequisites
 
 This document assumes you are familiar with Mule, http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors],
 and http://www.mulesoft.org/documentation/display/current/Anypoint+Studio+Essentials[Anypoint Studio Essentials]. To increase your familiarity with Studio,
@@ -26,11 +24,14 @@ http://www.mulesoft.org/documentation/display/current/Global+Elements[Mule Globa
 This document describes implementation examples within the context of Anypoint Studio, Mule ESB’s graphical user interface, and, in parallel,
 includes configuration details for doing the same in the XML Editor.
 
+=== Compatibility Matrix
 
+[width="100%", options="header"]
 |=======
 |Application/Service |Version
-|Mule Runtime |3.8.0 and later
-|Valomnia | Valomnia Account|=======
+|Mule Runtime |3.7.0 and later
+|PayPal | Classic SOAP API ver 2.0
+|=======
 
 == Installing and Configuring
 
@@ -40,16 +41,16 @@ You can install a connector in Anypoint Studio using the instructions in http://
 === Updating From an Older Version
 
 Everytime an updated version of a connector is released, Anypoint studio displays a popup in the bottom right corner of you screen with the following message: Updates Available.
-To upgrade to the newer version of the Valomnia connector:
+To upgrade to the newer version of the PayPal connector:
 
 1. Click the popup and check for the available updates.
-2. Select the *Valomnia Connector 3.0* check-box and click *Next*.
+2. Select the *PayPal Connector 3.0* check-box and click *Next*.
 3. Follow the instructions provided by the user interface.
 4. Restart Studio when prompted.
 After restarting, if you have several versions of the connector installed, Mule asks you for the version of the connector you like to use.
 
 === Creating a New Project
-To use the Valomniat connector in a Mule application project:
+To use the PayPal connector in a Mule application project:
 
 . In Studio, select *File>New>Mule Project*.
 +
