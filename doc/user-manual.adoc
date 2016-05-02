@@ -1,4 +1,4 @@
-= PayPal Connector 3.0
+﻿= PayPal Connector 3.0
 
 :toc: macro
 :toc-title: Contents:
@@ -11,11 +11,24 @@
 
 [green]#Community#
 
-The PayPal Connector facilitates connections between Mule integration and PayPal. The PayPal Connector v3.0 allows you to perform any PayPal operations mentioned in https://developer.paypal.com/docs/classic/api/. The connector as of now only supports Signature API credential type of authentication.
+The PayPal Connector facilitates connections between Mule integration and PayPal. The PayPal Connector v3.0 allows you to perfo= Valomnia Connector 1.0
+
+:toc: macro
+:toc-title: Contents:
+
+:imagesdir: .\images
+
+:source-highlighter: prettify
+
+:!numbered:
+
+[green]#Community#
+
+The Valomnia Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account . 
 
 toc::[]
 
-=== Prerequisites
+=== Prerequisites 
 
 This document assumes you are familiar with Mule, http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors],
 and http://www.mulesoft.org/documentation/display/current/Anypoint+Studio+Essentials[Anypoint Studio Essentials]. To increase your familiarity with Studio,
