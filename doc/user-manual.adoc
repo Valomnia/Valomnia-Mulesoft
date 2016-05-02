@@ -37,7 +37,7 @@ includes configuration details for doing the same in the XML Editor.
 == Installing and Configuring
 
 === Installing
-You can install a connector in Anypoint Studio using the instructions in http://www.mulesoft.org/documentation/display/current/Anypoint+Exchange[Installing a Connector from Anypoint Exchange].Valomnia connector:
+You can install a connector in Anypoint Studio using the instructions in http://www.mulesoft.org/documentation/display/current/Anypoint+Exchange[Installing a Connector from Anypoint Exchange].===Valomnia connector:
 
 1. .
 2. Select the *Valomnia Connector * check-box and click *Next*.
