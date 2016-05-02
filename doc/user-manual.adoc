@@ -113,11 +113,7 @@ After you call the findItems operation, you can use the Service and Operation
 fields to select a method that you want to execute. The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
 
 === Use Cases
-Below are a few common use case for the Valomnia Connector v1.0:
 
-* .
-
-Please refer to https://developer.paypal.com/docs/classic/api/[PayPal API reference] to know the possible use cases.
 
 === Adding the Valomnia Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
