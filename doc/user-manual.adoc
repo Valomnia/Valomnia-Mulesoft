@@ -29,8 +29,8 @@ includes configuration details for doing the same in the XML Editor.
 [width="100%", options="header"]
 |=======
 |Application/Service |Version
-|Mule Runtime |3.7.0 and later
-|PayPal | Classic SOAP API ver 2.0
+|Mule Runtime |3.8.0 and later
+|Valomnia | Valomnia Account
 |=======
 
 == Installing and Configuring
