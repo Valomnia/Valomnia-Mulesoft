@@ -11,7 +11,7 @@
 
 [green]#Community#
 
-The PayPal Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account 
+The Valomnia Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account 
 
 === Prerequisites
 
