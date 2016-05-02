@@ -1,17 +1,4 @@
-﻿= PayPal Connector 3.0
-
-:toc: macro
-:toc-title: Contents:
-
-:imagesdir: .\images
-
-:source-highlighter: prettify
-
-:!numbered:
-
-[green]#Community#
-
-The PayPal Connector facilitates connections between Mule integration and PayPal. The PayPal Connector v3.0 allows you to perfo= Valomnia Connector 1.0
+﻿= Valomnia Connector 1.0
 
 :toc: macro
 :toc-title: Contents:
@@ -39,9 +26,7 @@ http://www.mulesoft.org/documentation/display/current/Global+Elements[Mule Globa
 This document describes implementation examples within the context of Anypoint Studio, Mule ESB’s graphical user interface, and, in parallel,
 includes configuration details for doing the same in the XML Editor.
 
-=== Compatibility Matrix
 
-[width="100%", options="header"]
 |=======
 |Application/Service |Version
 |Mule Runtime |3.7.0 and later
