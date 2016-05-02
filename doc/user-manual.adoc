@@ -168,7 +168,7 @@ image::Configuration.PNG[Global Configuration, 500]
 
 . Save and run the project as a Mule Application.
 . From a browser, navigate to http://localhost:8081/Valomnia/findItems
-. Mule performs the query to get the current balance in the PayPal account associated with the user defined in global element.
+. Mule performs the query to get the current balance in the Valomnia account associated with the user defined in global element.
 
 == Example Code
 
