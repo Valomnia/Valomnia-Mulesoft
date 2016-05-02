@@ -95,7 +95,7 @@ image::Configuration.PNG[Global Configuration, 500]
 In the image above, the placeholder values refer to a configuration file placed in the src folder of your projecthttps://developer.mulesoft.com/docs/display/current/Configuring+Properties [Learn how to configure properties]. You can either enter your credentials into the global configuration properties, or reference a configuration file that contains these values. For simpler maintenance and better re-usability of your project, Mule recommends that you use a configuration file. Keeping these values in a separate file is useful if you need to deploy to different environments, such as production, development, and QA, where your access credentials differ. See https://developer.mulesoft.com/docs/display/current/Deploying+to+Multiple+Environments[Deploying to Multiple Environments] for instructions on how to manage this.
 ====
 
-6. Click *Validate Config* to confirm that the parameters of your global configuration are accurate, and that Mule is able to successfully connect to PayPal. Read more about http://www.mulesoft.org/documentation/display/current/Testing+Connections[Testing Connections].
+6. Click *Validate Config* to confirm that the parameters of your global configuration are accurate, and that Mule is able to successfully connect to Valomnia. Read more about http://www.mulesoft.org/documentation/display/current/Testing+Connections[Testing Connections].
 7. Click *OK* to save the global connector configurations.
 
 == Using the Connector
