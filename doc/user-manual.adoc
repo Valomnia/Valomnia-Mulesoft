@@ -49,7 +49,7 @@ To upgrade to the newer version of the Valomnia connector:
 After restarting, if you have several versions of the connector installed, Mule asks you for the version of the connector you like to use.
 
 === Creating a New Project
-To use the Valomnia connector in a Mule application project:
+To use the Valomniat connector in a Mule application project:
 
 . In Studio, select *File>New>Mule Project*.
 +
