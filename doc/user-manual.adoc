@@ -58,7 +58,7 @@ image::filenew.png[File Menu, 500]
 +
 . Enter a name for your new project and leave the remaining options with their default values.
 +
-image::valomnia connector.PNG[New Project, 500]
+image::valomnia connector.png[New Project, 500]
 +
 . If you plan to use Git, select *Create a .gitignore file* for the project with default ignores for Studio Projects, and then click *Next*.
 . Click *Finish* to create the project.
