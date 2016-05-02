@@ -64,23 +64,21 @@ image::valomnia.PNG[New Project, 500]
 . Click *Finish* to create the project.
 
 
-=== Configuring the PayPal Connector Global Element
-To use the PayPal Connector in your Mule application, you must configure a global PayPal element that can be used by all the PayPal connectors in the application (read more about global elements).
+=== Configuring the Valomnia Connector Global Element
+To use the Valomnia Connector in your Mule application, you must configure a global Valomnia element that can be used by all the Valomnia connectors in the application (read more about global elements).
 
-PayPal SOAP API relies on the authentication information be passed via SOAP Headers as part of SOAP messages. The configuration supports Signature API credentials style SOAP headers. For more details on different types of authentication mechanism in PayPal please refer to https://developer.paypal.com/docs/classic/api/apiCredentials/[PayPal Credentials].
-
-To create a global PayPal configuration:
+To create a global Valomnia configuration:
 
 1.  Click the *Global Elements* tab at the base of the canvas.
 2.  On the Global Mule Configuration Elements screen, click *Create*.
-3.  In the *Choose Global Type* wizard, expand *Connector Configuration*, and then select *PayPal Connector: configuration (Signature)*.
+3.  In the *Choose Global Type* wizard, expand *Connector Configuration*, and then select *Valomnia Connector: configuration (Signature)*.
 +
 image::ChooseGlobalType.png[Connector Configuration, 500]
 +
 4.  Click *OK*.
 5.  Enter the global element properties:
 
-a. For PayPal Connector: Configuration:
+a. For Valomnia Connector: Configuration:
 +
 image::DemoGloablElement.png[Global Configuration, 500]
 +
@@ -90,10 +88,7 @@ image::DemoGloablElement.png[Global Configuration, 500]
 |Name|Alphanumeric text string that uniquely identifies the user who owns the account
 |Username|Key that plays the role of a username
 |Password|Key that plays the role of a password
-|Service Address|PayPal endpoint reference. Refer to this for https://developer.paypal.com/docs/classic/api/endpoints/[PayPal endpoints].
-|Signature|API Signature given by PayPal for this username
-|App Id|PayPal Application Id.
-|=======
+|baseUrl|Valomnia  BaseUrl reference.=======
 +
 [NOTE]
 ====
