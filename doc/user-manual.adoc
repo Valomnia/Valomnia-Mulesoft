@@ -99,42 +99,39 @@ In the image above, the placeholder values refer to a configuration file placed 
 7. Click *OK* to save the global connector configurations.
 
 == Using the Connector
-The PayPal Connector v3.0 is  an operation-based connector,
+Valomnia Connector v1.0 is  an operation-based connector,
 which means that when you add the connector to your flow,
-you need to configure a specific operation (Invoke operation)
-for the connector to perform. The XML element for the Invoke operation
+you need to configure a specific operation (findItems operation)
+for the connector to perform. The XML element for the findItems operation
 is
 [source,xml]
 ----
-<paypal:invoke>
+<Valomnia:findItems>
 ----
 
-After you call the Invoke operation, you can use the Service and Operation
-fields to select a method that you want to execute. The PayPal connector v3.0 allows you to
-use all the SOAP API's exposed by PayPal WSDL file.
+After you call the findItems operation, you can use the Service and Operation
+fields to select a method that you want to execute. The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
 
 === Use Cases
-Below are a few common use case for the PayPal Connector v5.0:
+Below are a few common use case for the Valomnia Connector v1.0:
 
-* Read balance for the PayPal Account
-* Accept payments from merchants
-* Accept bulk payments.
+* .
 
 Please refer to https://developer.paypal.com/docs/classic/api/[PayPal API reference] to know the possible use cases.
 
-=== Adding the PayPal Connector 5.0 to a Flow
+=== Adding the Valomnia Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
-. Drag the PayPal connector onto the canvas, then select it to open the properties editor.
+. Drag the Valomnia connector onto the canvas, then select it to open the properties editor.
 . Configure the connector's parameters:
 +
-image::GetBalanceConfig.png[Connector Parameters, 500]
+image::FindItemsConfig.PNG[Connector Parameters, 500]
 +
 [width="100%", options="header"]
 |=======
 |Field |Description
 |Display Name |Enter a unique label for the connector
-|Connector Configuration |Select a global PayPal connector element from the drop-drown.
-|Operation |Invoke.
+|Connector Configuration |Select a global cValomnia connector element from the drop-drown.
+|Operation |findItems.
 |Service |Select a Service from the drop-down.
 |Operation| Select the operation to perform on the table your select.
 |=======
@@ -143,9 +140,9 @@ image::GetBalanceConfig.png[Connector Parameters, 500]
 
 == Example Use Case
 
-Create a Mule flow to get balance from the PayPal account.
+Create a Mule flow to get items from the Valomnia account.
 
-image::getbalanceflow.png[Demo Flow, 500]
+image::getItemsflow.PNG[Demo Flow, 500]
 
 . Create a Mule project in your Anypoint Studio.
 . Drag an HTTP connector into the canvas, then select it to open the properties editor console.
