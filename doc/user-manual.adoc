@@ -41,10 +41,10 @@ You can install a connector in Anypoint Studio using the instructions in http://
 === Updating From an Older Version
 
 Everytime an updated version of a connector is released, Anypoint studio displays a popup in the bottom right corner of you screen with the following message: Updates Available.
-To upgrade to the newer version of the PayPal connector:
+To upgrade to the newer version of the Valomnia connector:
 
 1. Click the popup and check for the available updates.
-2. Select the *PayPal Connector 3.0* check-box and click *Next*.
+2. Select the *Valomnia 1.0* check-box and click *Next*.
 3. Follow the instructions provided by the user interface.
 4. Restart Studio when prompted.
 After restarting, if you have several versions of the connector installed, Mule asks you for the version of the connector you like to use.
