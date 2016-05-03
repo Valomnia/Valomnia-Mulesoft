@@ -43,7 +43,9 @@ to invoke  defined by the flows.
 While the demo project is
  up and running  you can click botton  to view the output of individual flows.
 
-You can also directly visit the below URL's to view the output of individual flows.* Get Items : http://localhost:8081/Valomnia/FindItems
+You can also directly visit the below URL's to view the output of individual flows.
+
+* Get Balance : http://localhost:8081/paypal/getbalance?version=51
 * Save Or Update Item : http://localhost:8081/Valomnia/SaveOrUpdateItem
 
 SUMMARY
