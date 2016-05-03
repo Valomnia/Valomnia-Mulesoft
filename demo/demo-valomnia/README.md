@@ -4,15 +4,21 @@
 
 INTRODUCTION
 ------------
-Pre-requisites
-
-Valomnia account   
-
+###
+#Pre-requisites
 
 
-Mule Server 3.7.X EE
+* Anypoint Studio with Mule ESB 3.8 Runtime.
 
-#Preparation
+* Anypoint Valomnia v1.0.0
+
+* Valomnia account
+
+
+
+
+
+###Preparation
 
 1.Import this DEMO in Anypoint Studio going to File → Import…​ → Anypoint Studio Project from External Localtion, select the demo project root and choose as server runtime Mule Server 3.7.x EE.
 
