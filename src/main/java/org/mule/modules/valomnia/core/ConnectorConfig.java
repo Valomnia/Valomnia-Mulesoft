@@ -122,7 +122,7 @@ public class ConnectorConfig {
 			final String url = encodage(parameters);
 
 			final HttpPost post = new HttpPost(
-					"http://valomnia.fieldtouch.com/j_spring_security_check?"
+					getBaseUrl()+"j_spring_security_check?"
 							+ url);
 
 			post.setHeader("Content-type", "application/json");
