@@ -23,7 +23,7 @@
 
 2.Once imported, in src/main/app you will find mule-app.properties file, this contains all the placeholders for the required properties to make the DEMO work. Open it. It will be like the following:
 
-valomnia.usernamei=
+valomnia.username=
 valomnia.password=
 valomnia.baseurl=
 
