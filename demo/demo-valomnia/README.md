@@ -1,40 +1,66 @@
-Anypoint PayPal Connector Demo
+Valomnia ConnectorDemo
 ==================================
 
 
 INTRODUCTION
 ------------
-The PayPal demo consists of the following projects:
+Pre-requisites
 
-* example-getbalance-getpaldetails - Provides sample flows on how to make use of various operations supported by the connector using the DataWeave (Data Framework Language). Most of the flows are developed based on the combination of related operations to make a logical outcome.
+Valomnia account   
 
-HOW TO RUN DEMO
----------------
 
-### Prerequisites
-In order to build and run this project, you'll need;
 
-* Anypoint Studio with Mule ESB 3.7 Runtime.
-* Anypoint PayPal v3.0.0
-* Access to a PayPal developer account
+Mule Server 3.7.X EE
 
-### Test the flows
+#Preparation
 
-With Anypoint Studio up and running, open the Import wizard from the File menu. A pop-up wizard will offer you the chance to pick Anypoint Studio Project from External Location. On the next wizard window point Project Root to the location of the demo project and select the Server Runtime as Mule Server 3.7.0 CE or EE. Once successfully imported the studio will automatically present the Anypoint Flows.
+1.Import this DEMO in Anypoint Studio going to File ? Import…? ? Anypoint Studio Project from External Localtion, select the demo project root and choose as server runtime Mule Server 3.7.x EE.
 
-From the Package Explorer view, expand the demo project and open the mule-app.properties file. Fill in the credentials of PayPal developer account. Note that the connector only works with API Signature as authentication mechanism, so please ensure to enable API signature in PayPal developer dashboard. 
+2.Once imported, in src/main/app you will find mule-app.properties file, this contains all the placeholders for the required properties to make the DEMO work. Open it. It will be like the following:
 
-#### paypal-operations-demo :
+valomnia.usernamei=
+valomnia.password
+valomnia.baseurl=
+Fill each property with the required value.
+3.In Anypoint Studio, Right click in the project folder ? Run As ? Mule Application.
+
+4.If the Mule App is deployed correctly, you can start playing with this app:
+
+
+
+#### Valomnia-operations-demo :
 
 * Run the demo project.
-* In web browser visit http://localhost:8081/paypal to view the demo page. The page displays the operations along with respective variables required to invoke the operation defined by the flows.
+* In web browser visit http://localhost:8081/Valomnia to view the demo page. The page displays the operations  
+to invoke  defined by the flows.
 
-While the demo project is up and running you can also directly visit the below URL's to view the output of individual flows.
+While the demo project is
+ up and running  you can click botton  to view the output of individual flows.
 
-* Get Balance : http://localhost:8081/paypal/getbalance?version=51
-* Get Pal Details : http://localhost:8081/paypal/getpaldetails?version=51
+You can also directly visit the below URL's to view the output of individual flows.
 
-SUMMARY
--------
+* Find Items
 
-Congratulations! The demo presents only a limited list of operations to play with, refer to the connector user manual for all the operations supported and further possibilities.
+*  : http://localhost:8081/Valomnia/FindItems
+
+* Save Or Update Item * :http://localhost:8081/Valomnia/SaveOrUpdateItem
+
+SUMMARY-------
+
+Congratulations! 
+The demo presents only a limited list 
+of operations to play with, refer to the connector user manual for all the operations supported and further possibilities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
