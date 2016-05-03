@@ -98,14 +98,14 @@ is
 [source,xml]
 ----
 <Valomnia:findItems>
- The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
+----The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
 
 === Use Cases
 
 
 === Adding the Valomnia Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
-. Drag the Valomnia connector onto the canvas, then select it to open the properties editor.
+. Drag the Valomnia connector onto the canvas, then select it to open the properties editor
 . Configure the connector's parameters:
 +
 image::FindItemsConfig.PNG[Connector Parameters, 500]
