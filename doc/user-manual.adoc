@@ -100,23 +100,16 @@ is
 <valomnia:findItems>
 ----
 
-. The PayPal connector v1.0 allows you get and save all types of entities  in Valomnia.
+. The Valomnia connector v1.0 allows you get and save all types of entities  in Valomnia.
 
-=== Use Cases
-Below are a few common use case for the PayPal Connector v5.0:
-
-* Read balance for the PayPal Account
-* Accept payments from merchants
-* Accept bulk payments.
-
-Please refer to https://developer.paypal.com/docs/classic/api/[PayPal API reference] to know the possible use cases.
+ 
 
 === Adding the Valomnia Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
-. Drag the PayPal connector onto the canvas, then select it to open the properties editor.
+. Drag the Valomnia connector onto the canvas, then select it to open the properties editor.
 . Configure the connector's parameters:
 +
-image::GetBalanceConfig.png[Connector Parameters, 500]
+image::FindItemsConfig.PNG[Connector Parameters, 500]
 +
 [width="100%", options="header"]
 |=======
@@ -134,7 +127,7 @@ image::GetBalanceConfig.png[Connector Parameters, 500]
 
 Create a Mule flow to get balance from the PayPal account.
 
-image::getbalanceflow.png[Demo Flow, 500]
+image::getItemsflow.PNG[Demo Flow, 500]
 
 . Create a Mule project in your Anypoint Studio.
 . Drag an HTTP connector into the canvas, then select it to open the properties editor console.
