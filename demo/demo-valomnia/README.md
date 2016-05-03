@@ -26,6 +26,7 @@
 valomnia.usernamei=
 valomnia.password=
 valomnia.baseurl=
+
 Fill each property with the required value.
 
 3.In Anypoint Studio, Right click in the project folder → Run As → Mule Application.
