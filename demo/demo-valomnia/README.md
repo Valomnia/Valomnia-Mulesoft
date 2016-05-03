@@ -1,4 +1,4 @@
-Valomnia ConnectorDemo
+﻿Valomnia ConnectorDemo
 ==================================
 
 
@@ -14,7 +14,7 @@ Mule Server 3.7.X EE
 
 #Preparation
 
-1.Import this DEMO in Anypoint Studio going to File ? Import�? ? Anypoint Studio Project from External Localtion, select the demo project root and choose as server runtime Mule Server 3.7.x EE.
+1.Import this DEMO in Anypoint Studio going to File → Import…​ → Anypoint Studio Project from External Localtion, select the demo project root and choose as server runtime Mule Server 3.7.x EE.
 
 2.Once imported, in src/main/app you will find mule-app.properties file, this contains all the placeholders for the required properties to make the DEMO work. Open it. It will be like the following:
 
@@ -22,7 +22,7 @@ valomnia.usernamei=
 valomnia.password
 valomnia.baseurl=
 Fill each property with the required value.
-3.In Anypoint Studio, Right click in the project folder ? Run As ? Mule Application.
+3.In Anypoint Studio, Right click in the project folder → Run As → Mule Application.
 
 4.If the Mule App is deployed correctly, you can start playing with this app:
 
@@ -43,7 +43,7 @@ You can also directly visit the below URL's to view the output of individual flo
 
 *  : http://localhost:8081/Valomnia/FindItems
 
-* Save Or Update Item * :http://localhost:8081/Valomnia/SaveOrUpdateItem
+* Save Or Update Item* :http://localhost:8081/Valomnia/SaveOrUpdateItem
 
 SUMMARY-------
 
