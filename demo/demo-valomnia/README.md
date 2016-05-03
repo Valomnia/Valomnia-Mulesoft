@@ -45,13 +45,9 @@ While the demo project is
 
 You can also directly visit the below URL's to view the output of individual flows.
 
-* Find Items
-
-*  : http://localhost:8081/Valomnia/FindItems
-
-* Save Or Update Item* :http://localhost:8081/Valomnia/SaveOrUpdateItem
-
-SUMMARY-------
+* Get Items : http://localhost:8081/Valomnia/FindItems
+* SaveOrUpdate Item : 
+http://localhost:8081/Valomnia/SaveOrUpdateItem SUMMARY-------
 
 Congratulations! 
 The demo presents only a limited list 
