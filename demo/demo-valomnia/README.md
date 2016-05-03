@@ -43,17 +43,13 @@ to invoke  defined by the flows.
 While the demo project is
  up and running  you can click botton  to view the output of individual flows.
 
-You can also directly visit the below URL's to view the output of individual flows.
+You can also directly visit the below URL's to view the output of individual flows.* Get Items : http://localhost:8081/Valomnia/FindItems
+* Save Or Update Item : http://localhost:8081/Valomnia/SaveOrUpdateItem
 
-* Get Items : http://localhost:8081/Valomnia/FindItems
-* SaveOrUpdate Item : 
-http://localhost:8081/Valomnia/SaveOrUpdateItemSUMMARY-------
+SUMMARY
+-------
 
-Congratulations! 
-The demo presents only a limited list 
-of operations to play with, refer to the connector user manual for all the operations supported and further possibilities.
-
-
+Congratulations! The demo presents only a limited list of operations to play with, refer to the connector user manual for all the operations supported and further possibilities.
 
 
 
