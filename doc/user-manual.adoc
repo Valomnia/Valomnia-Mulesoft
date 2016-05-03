@@ -123,7 +123,7 @@ image::FindItemsConfig.PNG[Connector Parameters, 500]
 
 == Example Use Case
 
-Create a Mule flow to get balance from the PayPal account.
+Create a Mule flow to get Items from the Valomnia account.
 
 image::getItemsflow.PNG[Demo Flow, 500]
 
@@ -136,7 +136,7 @@ image::HTTP.png[HTTP Listener, 500]
 +
 .. Configure the following HTTP parameters, while retaining the default values for the other fields, expect base path:
 +
-image::httplistenerconfiguration.png[HTTP Parameters, 500]
+image::httplistenerconfiguration.PNG[HTTP Parameters, 500]
 +
 [width="100%", options="header"]
 |=======
@@ -145,100 +145,53 @@ image::httplistenerconfiguration.png[HTTP Parameters, 500]
 |Port|8081
 |=======
 +
-.. Reference the HTTP Listener Configuration global element and set the path to '/getbalance':
-. Drag a PayPal Connector v3.0 into the flow.
-. If you haven't already created a PayPal global element, add one by clicking the plus sign next to the Connector Configuration field.
+.. Reference the HTTP Listener Configuration global element and set the path to '/FindItems':
+. Drag a Valomnia Connector v1.0 into the flow.
+. If you haven't already created a valomnia global element, add one by clicking the plus sign next to the Connector Configuration field.
 . Configure the global element.
 +
-image::DemoGloablElement.png[Global Configuration, 500]
+image::Configuration.PNG[Global Configuration, 500]
 +
-. Click *Validate Config* to confirm that Mule can connect with PayPal. If the connection is successful, click *OK* to save the configurations of the global element. If unsuccessful, revise or correct any incorrect parameters, then test again.
-. Back in the properties editor of the PayPal Connector v3.0, configure the remaining parameters:
-. Configure the remaining parameters of the connector:
-+
-image::GetBalanceConfig.png[Connector Parameters, 500]
-+
-. Drag a DataWeave Transform Message component between the HTTP connector and the PayPal Connector v3.0, then configure it as follows:
-+
-image::DataMapper1.png[Connector Parameters, 500]
-+
-. Add a Logger component between the DataWeave and PayPal Connector component to log the payload.
-. Add another Logger component after the PayPal connector component to log the response.
+. Click *Validate Config* to confirm that Mule can connect with Valomnia. If the connection is successful, click *OK* to save the configurations of the global element. If unsuccessful, revise or correct any incorrect parameters, then test again.
+
+
+. Drag a Object To Json Transform Message component after the Valomnia connector  v1.0Connector
+.
+
 . Add a XML to JSON transformer.
 . Save and run the project as a Mule Application.
-. From a browser, navigate to http://localhost:8081/paypal/getbalance?version=51.
-. Mule performs the query to get the current balance in the PayPal account associated with the user defined in global element.
+. From a browser, navigate to http://localhost:8081/Valomnia/FindItems.
+. Mule performs the query to get the Items in the Valomnia account associated with the user defined in global element.
 
 == Example Code
 
-NOTE: For this code to work in Anypoint Studio, you must provide the credentials for the PayPal account. You can either replace the variables with their values in the code, or you can add a file named  mule.properties  in the  src/main/resources  folder  to provide the values for each variable.
+NOTE: For this code to work in Anypoint Studio, you must provide the credentials for the Valomnia account. You can either replace the variables with their values in the code, or you can add a file named  mule.properties  in the  src/main/resources  folder  to provide the values for each variable.
 
 [source,xml]
 ----
-<?xml version="1.0" encoding="UTF-8"?>
-
-<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:paypal="http://www.mulesoft.org/schema/mule/paypal" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.7.0"
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:valomnia="http://www.mulesoft.org/schema/mule/valomnia" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
-http://www.mulesoft.org/schema/mule/paypal http://www.mulesoft.org/schema/mule/paypal/current/mule-paypal.xsd
-http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/valomnia http://www.mulesoft.org/schema/mule/valomnia/current/mule-valomnia.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
-    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="paypal" doc:name="HTTP Listener Configuration"/>
-    <paypal:config name="PayPal_Connector__configuration__Signature_" username="${config.username}" password="${config.password}" serviceAddress="${config.serviceAddress}" signature="${config.signature}" appId="${config.appId}" doc:name="PayPal Connector: configuration (Signature)"/>
-    <flow name="paypal-operations-form-flow">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration" basePath="Valomnia"/>
+    <valomnia:config name="Valomnia__Configuration" username="${valomnia.username}" password="${valomnia.password}" baseUrl="${valomnia.baseurl}" doc:name="Valomnia: Configuration"/>
+    
+      <flow name="valomnia-operations-form-flow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <parse-template location="paypal-operations-demo.html" doc:name="Parse Template"/>
+        <parse-template location="valomnia-demo.html" doc:name="Parse Template"/>
         <set-property propertyName="Content-Type" value="text/html" doc:name="Property"/>
     </flow>
-    <flow name="getbalance-flow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/getbalance" doc:name="/getbalance"/>
-        <dw:transform-message doc:name="Transform Message">
-            <dw:set-payload><![CDATA[%dw 1.0
-%output application/xml
-%namespace ns0 urn:ebay:api:PayPalAPI
-%namespace ns1 urn:ebay:apis:eBLBaseComponents
----
-{
-	ns0#GetBalanceReq: {
-		ns0#GetBalanceRequest: {
-			ns1#Version: inboundProperties.'http.query.params'.version
-		}
-	}
-}]]></dw:set-payload>
-        </dw:transform-message>
-        <logger message="Before -- #[payload]" level="INFO" doc:name="Logger"/>
-        <paypal:invoke config-ref="PayPal_Connector__configuration__Signature_" type="PayPalAPI||GetBalance" doc:name="PayPal Connector Get Balance"/>
-        <logger message="After -- #[payload]" level="INFO" doc:name="Logger"/>
-        <json:xml-to-json-transformer doc:name="XML to JSON"/>
+    
+    
+    <flow name="valomnia-demoFlowFindItems">
+    
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/FindItems" doc:name="HTTP"/>
+        <valomnia:find-items config-ref="Valomnia__Configuration" doc:name="Valomnia"/>
+        <logger level="INFO" doc:name="Logger"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
     </flow>
-    <flow name="getpaldetails-flow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/getpaldetails" doc:name="/getpaldetails"/>
-        <dw:transform-message doc:name="Transform Message">
-            <dw:set-payload><![CDATA[%dw 1.0
-%output application/xml
-%namespace ns0 urn:ebay:api:PayPalAPI
-%namespace ns1 urn:ebay:apis:eBLBaseComponents
----
-{
-	ns0#GetPalDetailsReq: {
-		ns0#GetPalDetailsRequest: {
-			ns1#Version: inboundProperties.'http.query.params'.version
-		}
-	}
-}]]></dw:set-payload>
-        </dw:transform-message>
-        <paypal:invoke config-ref="PayPal_Connector__configuration__Signature_" type="PayPalAPI||GetPalDetails" doc:name="PayPal Connector Get Pal Details"/>
-        <json:xml-to-json-transformer doc:name="XML to JSON"/>
-    </flow>
-</mule>
-
-
-----
-== See Also
-
-* Learn more about working with http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors].
-* Learn how to use http://www.mulesoft.org/documentation/display/current/Using+Transformers[Mule Transformers].
