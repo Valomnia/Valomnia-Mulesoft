@@ -11,9 +11,11 @@
 
 [green]#Community#
 
-The Valomnia Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account 
+The Valomnia Connector facilitates connections between Mule integration and Valomnia FieldTouch. The Valomnia Connector v1.0 allows you to get and Save  entities for Valomnia   User Account . 
 
-=== Prerequisites
+toc::[]
+
+=== Prerequisites 
 
 This document assumes you are familiar with Mule, http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors],
 and http://www.mulesoft.org/documentation/display/current/Anypoint+Studio+Essentials[Anypoint Studio Essentials]. To increase your familiarity with Studio,
@@ -30,15 +32,18 @@ includes configuration details for doing the same in the XML Editor.
 |=======
 |Application/Service |Version
 |Mule Runtime |3.8.0 and later
-|Valomnia | Valomnia Account
-|=======
+|Valomnia Account |------ |=======
 
 == Installing and Configuring
 
 === Installing
-You can install a connector in Anypoint Studio using the instructions in http://www.mulesoft.org/documentation/display/current/Anypoint+Exchange[Installing a Connector from Anypoint Exchange].
+You can install a connector in Anypoint Studio using the instructions in http://www.mulesoft.org/documentation/display/current/Anypoint+Exchange[Installing a Connector from Anypoint Exchange].===Valomnia connector:
 
-
+ 
+2. Select the *Valomnia Connector * check-box and click *Next*.
+3. Follow the instructions provided by the user interface.
+4. Restart Studio when prompted.
+After restarting, if you have several versions of the connector installed, Mule asks you for the version of the connector you like to use.
 
 === Creating a New Project
 To use the Valomnia connector in a Mule application project:
@@ -49,79 +54,64 @@ image::filenew.png[File Menu, 500]
 +
 . Enter a name for your new project and leave the remaining options with their default values.
 +
-image::valomnia.PNG[New Project, 500]
+image::valomnia connector.png[New Project, 500]
 +
-. If you plan to use Git, select *Create a .gitignore file* for the project with default ignores for Studio Projects, and then click *Next*.
+. , and then click *Next*.
 . Click *Finish* to create the project.
 
 
 === Configuring the Valomnia Connector Global Element
-To use the Valomnia Connector in your Mule application, you must configure a global Valomnia element that can be used by all the Valomnia connectors in the application (read more about global elements).
+To use the Valomnia Connector in your Mule application, you must configure a global Valomnia element that can be used by all the Valomnia connectors in the application (read more about global elements)..
 
 To create a global Valomnia configuration:
 
 1.  Click the *Global Elements* tab at the base of the canvas.
 2.  On the Global Mule Configuration Elements screen, click *Create*.
-3.  In the *Choose Global Type* wizard, expand *Connector Configuration*, and then select *Valomnia Connector: configuration (Signature)*.
+3.  In the *Choose Global Type* wizard, expand *Connector Configuration*, and then select *Valomnia Connector: configuration *.
 +
-image::valomnia.PNG[Connector Configuration, 500]
+image::valomnia connector.png[Connector Configuration, 500]
 +
 4.  Click *OK*.
 5.  Enter the global element properties:
 
 a. For Valomnia Connector: Configuration:
 +
-image::Configuration.PNG[Global Configuration, 500]
+image::Configuration.png[Global Configuration,500]
 +
 [width="100%", options="header"]
-|=======
-|Field|Description
-|Username|Key that plays the role of a username
-|Password|Key that plays the role of a password
-|baseUrl|Valomnia  BaseUrl reference.
-|=======
-+
-[NOTE]
-====
-In the image above, the placeholder values refer to a configuration file placed in the src folder of your projecthttps://developer.mulesoft.com/docs/display/current/Configuring+Properties [Learn how to configure properties]. You can either enter your credentials into the global configuration properties, or reference a configuration file that contains these values. For simpler maintenance and better re-usability of your project, Mule recommends that you use a configuration file. Keeping these values in a separate file is useful if you need to deploy to different environments, such as production, development, and QA, where your access credentials differ. See https://developer.mulesoft.com/docs/display/current/Deploying+to+Multiple+Environments[Deploying to Multiple Environments] for instructions on how to manage this.
 ====
 
-6. Click *Validate Config* to confirm that the parameters of your global configuration are accurate, and that Mule is able to successfully connect to Valomnia. Read more about http://www.mulesoft.org/documentation/display/current/Testing+Connections[Testing Connections].
+6. Click *Validate Config* to confirm that the parameters of your global configuration are accurate, and that Mule is able to successfully connect to Valomnia. 
+Read more about http://www.mulesoft.org/documentation/display/current/Testing+Connections[Testing Connections].
 7. Click *OK* to save the global connector configurations.
 
-== Using the Connector
-Valomnia Connector v1.0 is  an operation-based connector,
+
+Using the Connector
+The Valomnia Connector v1.0 is  an operation-based connector,
 which means that when you add the connector to your flow,
 you need to configure a specific operation (findItems operation)
 for the connector to perform. The XML element for the findItems operation
 is
 [source,xml]
 ----
-<Valomnia:findItems>----After you call the Invoke operation, you can use the Service and Operation
-fields to select a method that you want to execute. The PayPal connector v3.0 allows you to
-use all the SOAP API's exposed by PayPal WSDL file.
+<valomnia:find-items   config-ref="Valomnia__Configuration" doc:name="Valomnia">
+----
 
-=== Use Cases
-Below are a few common use case for the PayPal Connector v5.0:
+After you call the findItems operation, you can use the Service and Operation
+fields to select a method that you want to execute
 
-* Read balance for the PayPal Account
-* Accept payments from merchants
-* Accept bulk payments.
-
-Please refer to https://developer.paypal.com/docs/classic/api/[PayPal API reference] to know the possible use cases.
-
-=== Adding the PayPal Connector 5.0 to a Flow
+=== Adding the Valomnia  Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
-. Drag the PayPal connector onto the canvas, then select it to open the properties editor.
+. Drag the Valomnia connector onto the canvas, then select it to open the properties editor.
 . Configure the connector's parameters:
 +
-image::GetBalanceConfig.png[Connector Parameters, 500]
+image::FindItemsConfig.png[Connector Parameters, 500]
 +
 [width="100%", options="header"]
 |=======
 |Field |Description
 |Display Name |Enter a unique label for the connector
-|Connector Configuration |Select a global PayPal connector element from the drop-drown.
+|Connector Configuration |Select a global Valomnia connector element from the drop-drown.
 |Operation |Invoke.
 |Service |Select a Service from the drop-down.
 |Operation| Select the operation to perform on the table your select.
@@ -131,9 +121,9 @@ image::GetBalanceConfig.png[Connector Parameters, 500]
 
 == Example Use Case
 
-Create a Mule flow to get balance from the PayPal account.
+Create a Mule flow to get Items from the Valomnia account.
 
-image::getbalanceflow.png[Demo Flow, 500]
+image::getItemsflow.png[Demo Flow, 500]
 
 . Create a Mule project in your Anypoint Studio.
 . Drag an HTTP connector into the canvas, then select it to open the properties editor console.
@@ -155,17 +145,22 @@ image::httplistenerconfiguration.png[HTTP Parameters, 500]
 +
 .. Reference the HTTP Listener Configuration global element and set the path to '/getbalance':
 . Drag a PayPal Connector v3.0 into the flow.
-. If you haven't already created a Valomnia global element, add one by clicking the plus sign next to the Connector Configuration field.
+. If you haven't already created a PayPal global element, add one by clicking the plus sign next to the Connector Configuration field.
 . Configure the global element.
 +
-image::Configuration.PNG[Global Configuration, 500]
+image::Configuration.png[Global Configuration, 500]
 +
-. Click *Validate Config* to confirm that Mule can connect with Valomnia. If the connection is successful, click *OK* to save the configurations of the global element. If unsuccessful, revise or correct any incorrect parameters, then test again
-. Drag a Object To Json Transform Message  after the Valomnia Connector
-
+. Click *Test Connection* to confirm that Mule can connect with Valomnia. If the connection is successful, click *OK* to save the configurations of the global element. If unsuccessful, revise or correct any incorrect parameters, then test again.
+. Back in the properties editor of the Valomnia Connector , configure the remaining parameters:
+. Configure the remaining parameters of the connector:
++
+image::FindItemsConfig.png[Connector Parameters, 500]
++
+. Add a Object to JSON transformer.Add a Logger component between  a Valomnia Connector  and the Object to JSON transformer to log the payload 
 . Save and run the project as a Mule Application.
-. From a browser, navigate to http://localhost:8081/Valomnia/findItems
-. Mule performs the query to get the current balance in the Valomnia account associated with the user defined in global element.
+. From a browser, navigate to http://localhost:8081/Valomnia/FindItems
+. Mule performs the query to get Items in  the Valomnia account associated with the user defined in global element.
+
 
 == Example Code
 
@@ -173,6 +168,8 @@ NOTE: For this code to work in Anypoint Studio, you must provide the credentials
 
 [source,xml]
 ----
+<?xml version="1.0" encoding="UTF-8"?>
+
 <mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:valomnia="http://www.mulesoft.org/schema/mule/valomnia" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -199,3 +196,19 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <logger level="INFO" doc:name="Logger"/>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
     </flow>
+    
+    <flow name="valomnia-demoFlowSaveItem">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/SaveOrUpdateItem" doc:name="HTTP"/>
+        <custom-transformer class="test.ItemTransformer" doc:name="Java"/>
+        <valomnia:save-item config-ref="Valomnia__Configuration" doc:name="Valomnia"/>
+        <logger level="INFO" doc:name="Logger"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </flow>
+</mule>
+
+
+----
+== See Also
+
+* Learn more about working with http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors].
+* Learn how to use http://www.mulesoft.org/documentation/display/current/Using+Transformers[Mule Transformers].
