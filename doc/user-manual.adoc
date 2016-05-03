@@ -1,4 +1,4 @@
-﻿= Valomnia Connector 3.0
+﻿= Valomnia Connector 1.0
 
 :toc: macro
 :toc-title: Contents:
