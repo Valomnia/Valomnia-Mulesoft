@@ -1,4 +1,4 @@
-﻿= Valomnia Connector 1.0
+﻿= Valomnia Connector 3.0
 
 :toc: macro
 :toc-title: Contents:
@@ -98,10 +98,7 @@ is
 [source,xml]
 ----
 <Valomnia:findItems>
-----
-
-After you call the findItems operation, you can use the Service and Operation
-fields to select a method that you want to execute. The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
+ The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
 
 === Use Cases
 
