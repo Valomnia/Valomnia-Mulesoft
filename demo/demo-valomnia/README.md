@@ -47,7 +47,7 @@ You can also directly visit the below URL's to view the output of individual flo
 
 * Get Items : http://localhost:8081/Valomnia/FindItems
 * SaveOrUpdate Item : 
-http://localhost:8081/Valomnia/SaveOrUpdateItem SUMMARY-------
+http://localhost:8081/Valomnia/SaveOrUpdateItemSUMMARY-------
 
 Congratulations! 
 The demo presents only a limited list 
