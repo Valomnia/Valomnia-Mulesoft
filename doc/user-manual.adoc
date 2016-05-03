@@ -115,10 +115,8 @@ image::FindItemsConfig.PNG[Connector Parameters, 500]
 |=======
 |Field |Description
 |Display Name |Enter a unique label for the connector
-|Connector Configuration |Select a global PayPal connector element from the drop-drown.
-|Operation |Invoke.
-|Service |Select a Service from the drop-down.
-|Operation| Select the operation to perform on the table your select.
+|Connector Configuration |Select a global Valomnia connector element from the drop-drown.
+|Operation |findItems.
 |=======
 +
 . Click the blank space on the canvas to save your connector configurations.
