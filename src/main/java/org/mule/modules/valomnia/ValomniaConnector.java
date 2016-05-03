@@ -197,7 +197,7 @@ public class ValomniaConnector {
     }
 
     @Processor
-    public ArrayList<CustomerCategory> findCustomerCategory() throws Exception {
+    public ArrayList<CustomerCategory> findCustomersCategory() throws Exception {
         return this.config.getClientProvider()
                 .getClient(CustomerCategory.class)
                 .getAll();
@@ -292,7 +292,7 @@ public class ValomniaConnector {
     }
 
     @Processor
-    public ArrayList<OrderDetail> findOrderDetails() throws Exception {
+    public ArrayList<OrderDetail> findOrdersDetails() throws Exception {
         return this.config.getClientProvider()
                 .getClient(OrderDetail.class)
                 .getAll();

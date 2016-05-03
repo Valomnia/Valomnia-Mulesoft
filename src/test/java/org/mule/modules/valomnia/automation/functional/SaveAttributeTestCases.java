@@ -2,16 +2,14 @@ package org.mule.modules.valomnia.automation.functional;
 
 import static org.junit.Assert.*;
 
-import com.google.common.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-
 import org.junit.Test;
 import org.mule.modules.valomnia.ValomniaConnector;
 import org.mule.modules.valomnia.entities.Attribute;
 import org.mule.tools.devkit.ctf.junit.AbstractTestCase;
 
+import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
 public class SaveAttributeTestCases extends AbstractTestCase<ValomniaConnector> {
@@ -19,8 +17,6 @@ public class SaveAttributeTestCases extends AbstractTestCase<ValomniaConnector> 
     public SaveAttributeTestCases() {
         super(ValomniaConnector.class);
     }
-
-   
 
     @Test
     public void verify() {
@@ -49,11 +45,12 @@ public class SaveAttributeTestCases extends AbstractTestCase<ValomniaConnector> 
 
             for (Attribute attribute: list1)
             {
-                if( attribute.getReference().equals("ref test Attribute"))
+                if( attribute.getReference()!=null)
+                        if (attribute.getReference().equals("ref test Attribute"))
                         
+           
                     exist = true;
-            }
-            
+}
             obj.setReference("ref test Attribute");
             obj.setName("test name  Attribute");
             obj.setType("COLOR");
@@ -67,8 +64,4 @@ public class SaveAttributeTestCases extends AbstractTestCase<ValomniaConnector> 
             else
                 assertEquals(getConnector().saveAttribute(obj), expected1);
         }
-
-
-
-        }
-
+}

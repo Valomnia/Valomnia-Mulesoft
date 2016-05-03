@@ -48,14 +48,25 @@ import org.mule.modules.valomnia.automation.functional.FindTaxsTestCases;
 import org.mule.modules.valomnia.automation.functional.SaveAttributeTestCases;
 import org.mule.modules.valomnia.automation.functional.SaveAttributeValueTestCases;
 import org.mule.modules.valomnia.automation.functional.SaveEmployeeGroupTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveOrderTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveOrderDetailTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveOrderPaymentTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveWareHouseStockTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveCustomerCategoryPriceListTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveCustomerPriceListTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveCustomerGroupPriceListTestCases;
+import org.mule.modules.valomnia.automation.functional.SaveCustomerGroupTaxListTestCases;
+import org.mule.modules.valomnia.automation.functional.FindAttributesValueTestCases;
 
 @RunWith(Suite.class)
 @SuiteClasses({
+        FindAttributesValueTestCases.class,
         FindItemsTestCases.class,
         FindItemsGroupTestCases.class,
         FindAttributsTestCases.class,
         FindUsersTestCases.class,
         FindUsersTestCases.class,
+        FindTaxsTestCases.class,
         FindCustomerCategoryTestCases.class,
         FindCustomerCategroryPriceListTestCases.class,
         FindCustomerGroupTaxListTestCases.class,
@@ -66,6 +77,7 @@ import org.mule.modules.valomnia.automation.functional.SaveEmployeeGroupTestCase
         FindCustomerTaxListTestCases.class,
         SaveContactTestCases.class,
         SaveItemGroupTestCases.class,
+        SaveEmployeeTestCases.class,
         SaveItemGroupAssignTestCases.class,
         SaveItemCategoryTestCases.class,
         SaveItemTestCases.class,
@@ -75,7 +87,6 @@ import org.mule.modules.valomnia.automation.functional.SaveEmployeeGroupTestCase
         SaveUnitTestCases.class,
         SaveUserTestCases.class,
         SaveTaxListTestCases.class,
-        SaveEmployeeTestCases.class,
         SavePriceListTestCases.class,
         SavePriceTestCases.class,
         SaveCustomerCategoryTestCases.class,
@@ -88,10 +99,17 @@ import org.mule.modules.valomnia.automation.functional.SaveEmployeeGroupTestCase
         SaveLoadingDetailsTestCases.class,
         SaveCustomerEmployeeTestCases.class,
         SaveTaxTypeTestCases.class,
-        FindTaxsTestCases.class,
+        SaveEmployeeGroupTestCases.class,
+        SaveOrderTestCases.class,
+        SaveOrderDetailTestCases.class,
+        SaveOrderPaymentTestCases.class,
+        SaveWareHouseStockTestCases.class,
+        SaveCustomerCategoryPriceListTestCases.class,
+        SaveCustomerPriceListTestCases.class,
+        SaveCustomerGroupPriceListTestCases.class,
+        SaveCustomerGroupTaxListTestCases.class,
         SaveAttributeTestCases.class,
         SaveAttributeValueTestCases.class,
-        SaveEmployeeGroupTestCases.class
         
 })
 public class FunctionalTestSuite {

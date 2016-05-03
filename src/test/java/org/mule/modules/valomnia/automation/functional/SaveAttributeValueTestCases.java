@@ -2,15 +2,15 @@ package org.mule.modules.valomnia.automation.functional;
 
 import static org.junit.Assert.*;
 
-import com.google.common.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
 import org.junit.Test;
 import org.mule.modules.valomnia.ValomniaConnector;
 import org.mule.modules.valomnia.entities.AttributeValue;
 import org.mule.tools.devkit.ctf.junit.AbstractTestCase;
 
+import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
 public class SaveAttributeValueTestCases extends AbstractTestCase<ValomniaConnector> {
@@ -19,7 +19,7 @@ public class SaveAttributeValueTestCases extends AbstractTestCase<ValomniaConnec
         super(ValomniaConnector.class);
     }
 
-    
+
     @Test
     public void verify() {
         java.lang.String expected1 = "Success Updated";
@@ -45,7 +45,8 @@ public class SaveAttributeValueTestCases extends AbstractTestCase<ValomniaConnec
 
         for (AttributeValue attributeValue: list1)
         {
-            if (attributeValue.getAttributeReference().equals("ref test Attribute")&attributeValue.getValue().equals("S"))
+            if (attributeValue.getAttributeReference()!=null)
+                    if(attributeValue.getAttributeReference().equals("ref test Attribute")&attributeValue.getValue().equals("S"))
                     
                 exist = true;
         }
@@ -65,4 +66,3 @@ public class SaveAttributeValueTestCases extends AbstractTestCase<ValomniaConnec
     }
 
 }
-
