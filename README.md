@@ -4,7 +4,7 @@ The Valomnia  Connector allows to use Valomnia  platform  (Valomnia)
 
 #Installation and Usage
 
-For information about usage and installation you can check our documentation at http://mulesoft.github.com/Valomnia
+For information about usage and installation you can check our documentation at https://github.com/mhedbiamin/valomnia
 
 #Usage
 
