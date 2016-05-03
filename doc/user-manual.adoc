@@ -97,12 +97,10 @@ for the connector to perform. The XML element for the findItems operation
 is
 [source,xml]
 ----
-<paypal:invoke>
+<valomnia:findItems>
 ----
 
-After you call the Invoke operation, you can use the Service and Operation
-fields to select a method that you want to execute. The PayPal connector v3.0 allows you to
-use all the SOAP API's exposed by PayPal WSDL file.
+. The PayPal connector v1.0 allows you get and save all types of entities  in Valomnia.
 
 === Use Cases
 Below are a few common use case for the PayPal Connector v5.0:
@@ -113,7 +111,7 @@ Below are a few common use case for the PayPal Connector v5.0:
 
 Please refer to https://developer.paypal.com/docs/classic/api/[PayPal API reference] to know the possible use cases.
 
-=== Adding the PayPal Connector 5.0 to a Flow
+=== Adding the Valomnia Connector 1.0 to a Flow
 . Create a new Mule project in Anypoint Studio.
 . Drag the PayPal connector onto the canvas, then select it to open the properties editor.
 . Configure the connector's parameters:
