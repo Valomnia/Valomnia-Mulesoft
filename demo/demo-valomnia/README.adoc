@@ -1,10 +1,10 @@
-﻿#Valomnia ConnectorDemo
+﻿Valomnia ConnectorDemo
 ==================================
 
 
 INTRODUCTION
 ------------
-#Pre-requisites
+Pre-requisites
 
 Valomnia account
 
