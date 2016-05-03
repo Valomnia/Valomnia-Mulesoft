@@ -97,7 +97,9 @@ for the connector to perform. The XML element for the findItems operation
 is
 [source,xml]
 ----
-<Valomnia:findItems>----
+<paypal:invoke>
+----
+
 After you call the Invoke operation, you can use the Service and Operation
 fields to select a method that you want to execute. The PayPal connector v3.0 allows you to
 use all the SOAP API's exposed by PayPal WSDL file.
@@ -251,28 +253,3 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 
 * Learn more about working with http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors].
 * Learn how to use http://www.mulesoft.org/documentation/display/current/Using+Transformers[Mule Transformers].
-	xmlns:spring="http://www.springframework.org/schema/beans" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/valomnia http://www.mulesoft.org/schema/mule/valomnia/current/mule-valomnia.xsd
-http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
-http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
-    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration" basePath="Valomnia"/>
-    <valomnia:config name="Valomnia__Configuration" username="${valomnia.username}" password="${valomnia.password}" baseUrl="${valomnia.baseurl}" doc:name="Valomnia: Configuration"/>
-    
-      <flow name="valomnia-operations-form-flow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
-        <parse-template location="valomnia-demo.html" doc:name="Parse Template"/>
-        <set-property propertyName="Content-Type" value="text/html" doc:name="Property"/>
-    </flow>
-    
-    
-    <flow name="valomnia-demoFlowFindItems">
-    
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/FindItems" doc:name="HTTP"/>
-        <valomnia:find-items config-ref="Valomnia__Configuration" doc:name="Valomnia"/>
-        <logger level="INFO" doc:name="Logger"/>
-        <json:object-to-json-transformer doc:name="Object to JSON"/>
-    </flow>
