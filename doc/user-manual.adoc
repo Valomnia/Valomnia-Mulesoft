@@ -98,7 +98,7 @@ is
 [source,xml]
 ----
 <Valomnia:findItems>
----- The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
+ The Valomnia connector v1.0 allows you get and save all types of Valomnia entities.
 
 === Use Cases
 
