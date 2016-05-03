@@ -155,7 +155,7 @@ image::Configuration.PNG[Global Configuration, 500]
 . Click *Validate Config* to confirm that Mule can connect with Valomnia. If the connection is successful, click *OK* to save the configurations of the global element. If unsuccessful, revise or correct any incorrect parameters, then test again.
 
 
-. Add a Logger component after the Valomnia Connector v1.0.. Add a XML to JSON transformer.
+. Add a Logger component after the Valomnia Connector v1.0 .. Add a XML to JSON transformer.
 . Save and run the project as a Mule Application.
 . From a browser, navigate to http://localhost:8081/Valomnia/FindItems.
 . Mule performs the query to get the Items in the Valomnia account associated with the user defined in global element.
