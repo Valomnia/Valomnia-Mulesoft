@@ -24,9 +24,10 @@
 2.Once imported, in src/main/app you will find mule-app.properties file, this contains all the placeholders for the required properties to make the DEMO work. Open it. It will be like the following:
 
 valomnia.usernamei=
-valomnia.password
+valomnia.password=
 valomnia.baseurl=
 Fill each property with the required value.
+
 3.In Anypoint Studio, Right click in the project folder → Run As → Mule Application.
 
 4.If the Mule App is deployed correctly, you can start playing with this app:
