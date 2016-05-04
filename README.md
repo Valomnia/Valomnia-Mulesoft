@@ -1,6 +1,6 @@
 #Mule Valomnia Connector
 
-The Valomnia  Connector allows to use Valomnia  platform  (Valomnia)
+The Valomnia Connector allows to connect with Valomnia platform (Valomnia)
 
 #Installation and Usage
 
