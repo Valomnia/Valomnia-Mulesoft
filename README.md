@@ -15,8 +15,7 @@ For information about usage and installation you can check our documentation at 
 
 3.enter your Valomnia Username and Valomnia Password and  Valomnia   API  BaseUrl
 
-.
-4.click in Test Connectivity, if everything is OK, Anypoint Studio will show you that the Test Connection was successfull.
+.4.click in Test Connectivity, if everything is OK, Anypoint Studio will show you that the Test Connection was successfull.
  
 # Reporting Issues
 
