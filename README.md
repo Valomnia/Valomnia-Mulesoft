@@ -6,10 +6,6 @@ The Valomnia  Connector allows to use Valomnia  platform  (Valomnia)
 
 For information about usage and installation you can check our documentation at https://github.com/mhedbiamin/valomnia
 
-#Usage
-
-#Configuration
-
 #Connection Management
 
 1.The easiest way to test the ValomniaConnector is to use the Connection  configuration.
