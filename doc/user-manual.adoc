@@ -151,7 +151,7 @@ image::httplistenerconfiguration.PNG[HTTP Parameters, 500]
 . Configure the global element.
 +
 image::Configuration.PNG[Global Configuration, 500]
-+.
+.
 .Add a XML to JSON transformer
 . Save and run the project as a Mule Application.
 . From a browser, navigate to http://localhost:8081/Valomnia/FindItems.
