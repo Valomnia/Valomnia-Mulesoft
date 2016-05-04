@@ -736,12 +736,33 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    /**
+     * Save Or Update an CustomerCategoryPriceList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category-price-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
     @Processor
     public String saveCustomerCategoryPriceList(@Payload CustomerCategoryPriceList obj) {
         return this.config.getClientProvider()
                 .getClient(CustomerCategoryPriceList.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an CustomerCategory entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
     
     @Processor
     public String saveCustomerCategory(@Payload CustomerCategory obj) {
@@ -750,6 +771,17 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    /**
+     * Save Or Update an PriceList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-price-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
+    
     @Processor
     public String savePriceList(@Payload PriceList obj) {
         return this.config.getClientProvider()
@@ -757,7 +789,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
-    
+    /**
+     * Save Or Update an CustomerCategoryTaxList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category-tax-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+   
     
     @Processor
     public String saveCustomerCategoryTaxList(@Payload CustomerCategoryTaxList obj) {
@@ -766,6 +807,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    /**
+     * Save Or Update an ItemCategory entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-category}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+   
 
     @Processor
     public String saveItemCategory(@Payload ItemCategory obj) {
@@ -775,12 +826,34 @@ public class ValomniaConnector {
     }
 
     
+    /**
+     * Save Or Update an TaxList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
     @Processor
     public String saveTaxList(@Payload TaxList obj) {
         return this.config.getClientProvider()
                 .getClient(TaxList.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an Contact entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-contact}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
+   
 
     @Processor
     public String saveContact(@Payload Contact obj) {
@@ -788,6 +861,16 @@ public class ValomniaConnector {
                 .getClient(Contact.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an Customer entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveCustomer(@Payload Customer obj) {
@@ -795,6 +878,15 @@ public class ValomniaConnector {
                 .getClient(Customer.class)
                 .merge(obj);
     }
+    /**
+     * Save Or Update an ItemAttribute entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-attribute}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveItemAttribute(@Payload ItemAttribute obj) {
@@ -802,6 +894,15 @@ public class ValomniaConnector {
                 .getClient(ItemAttribute.class)
                 .merge(obj);
     }
+    /**
+     * Save Or Update an Attribute entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-attribute}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     
     @Processor
     public String saveAttribute(@Payload Attribute obj) {
@@ -809,6 +910,16 @@ public class ValomniaConnector {
                 .getClient(Attribute.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an Employee entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-employee}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveEmployee(@Payload Employee obj) {
@@ -817,6 +928,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an CustomerGroup entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveCustomerGroup(@Payload CustomerGroup obj) {
         return this.config.getClientProvider()
@@ -824,12 +945,32 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    
+    /**
+     * Save Or Update an CustomerEmployee entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-employee}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveCustomerEmployee(@Payload CustomerEmployee obj) {
         return this.config.getClientProvider()
                 .getClient(CustomerEmployee.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an CustomerGroupAssign entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-assign}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveCustomerGroupAssign(@Payload CustomerGroupAssign obj) {
@@ -838,6 +979,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an CustomerGroupPriceList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-price-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveCustomerGroupPriceList(@Payload CustomerGroupPriceList obj) {
         return this.config.getClientProvider()
@@ -845,12 +996,32 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    /**
+     * Save Or Update an UserAuthority entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-user-authority}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
     @Processor
     public String saveUserAuthority(@Payload UserAuthority obj) {
         return this.config.getClientProvider()
                 .getClient(UserAuthority.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an Authority entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-authority}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveAuthority(@Payload Authority obj) {
@@ -859,12 +1030,32 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    /**
+     * Save Or Update an CustomerGroupTaxList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-tax-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
+    
     @Processor
     public String saveCustomerGroupTaxList(@Payload CustomerGroupTaxList obj) {
         return this.config.getClientProvider()
                 .getClient(CustomerGroupTaxList.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an CustomerPaymentType entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-payment-type}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveCustomerPaymentType(@Payload CustomerPaymentType obj) {
@@ -872,6 +1063,16 @@ public class ValomniaConnector {
                 .getClient(CustomerPaymentType.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an CustomerPriceList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-price-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveCustomerPriceList(@Payload CustomerPriceList obj) {
@@ -879,6 +1080,16 @@ public class ValomniaConnector {
                 .getClient(CustomerPriceList.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an CustomerTaxList entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-tax-list}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveCustomerTaxList(@Payload CustomerTaxList obj) {
@@ -887,12 +1098,31 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an EmployeeGroup entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-employee-group}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveEmployeeGroup(@Payload EmployeeGroup obj) {
         return this.config.getClientProvider()
                 .getClient(EmployeeGroup.class)
                 .merge(obj);
     }
+    /**
+     * Save Or Update an Tax entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveTax(@Payload Tax obj) {
@@ -900,6 +1130,16 @@ public class ValomniaConnector {
                 .getClient(Tax.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an ItemGroup entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-group}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveItemGroup(@Payload ItemGroup obj) {
@@ -907,6 +1147,16 @@ public class ValomniaConnector {
                 .getClient(ItemGroup.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an ItemGroupAssign entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-group-assign}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveItemGroupAssign(@Payload ItemGroupAssign obj) {
@@ -915,12 +1165,32 @@ public class ValomniaConnector {
                 .merge(obj);
     }
     
+    
+    /**
+     * Save Or Update an AttributeValue entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-attribute-value}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveAttributeValue(@Payload  AttributeValue obj) {
         return this.config.getClientProvider()
                 .getClient(AttributeValue.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an ItemUnit entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-unit}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveItemUnit(@Payload ItemUnit obj) {
@@ -929,6 +1199,15 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    /**
+     * Save Or Update an Loading entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-loading}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveLoading(@Payload Loading obj) {
         return this.config.getClientProvider()
@@ -936,6 +1215,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an LoadingDetails entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-loading-details}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveLoadingDetails(@Payload LoadingDetails obj) {
         return this.config.getClientProvider()
@@ -943,12 +1232,31 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an OrderDetail entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order-detail}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveOrderDetail(@Payload OrderDetail obj) {
         return this.config.getClientProvider()
                 .getClient(OrderDetail.class)
                 .merge(obj);
     }
+    /**
+     * Save Or Update an OrderPayment entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order-payment}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveOrderPayment(@Payload OrderPayment obj) {
@@ -956,6 +1264,16 @@ public class ValomniaConnector {
                 .getClient(OrderPayment.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an Price entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-price}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String savePrice(@Payload Price obj) {
@@ -963,6 +1281,15 @@ public class ValomniaConnector {
                 .getClient(Price.class)
                 .merge(obj);
     }
+    /**
+     * Save Or Update an Order entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveOrder(@Payload Object obj) {
@@ -970,6 +1297,16 @@ public class ValomniaConnector {
                 .getClient(Order.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an TaxType entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax-type}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveTaxType(@Payload TaxType obj) {
@@ -978,12 +1315,32 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an Unit entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-unit}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveUnit(@Payload Unit obj) {
         return this.config.getClientProvider()
                 .getClient(Unit.class)
                 .merge(obj);
     }
+    
+    /**
+     * Save Or Update an User entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-user}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
 
     @Processor
     public String saveUser(@Payload Object obj) {
@@ -992,6 +1349,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an WareHouse entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-ware-house}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveWareHouse(@Payload Object obj) {
         return this.config.getClientProvider()
@@ -999,6 +1366,16 @@ public class ValomniaConnector {
                 .merge(obj);
     }
 
+    
+    /**
+     * Save Or Update an WareHouseStock entity for the connected account
+     *
+     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-ware-house-stock}
+     * 
+     * @param obj
+     *            the input object saved or updated
+     * @return response String for Valomnia API
+     */
     @Processor
     public String saveWareHouseStock(@Payload Object obj) {
         return this.config.getClientProvider()
