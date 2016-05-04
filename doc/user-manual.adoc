@@ -56,7 +56,7 @@ image::valomnia.PNG[New Project, 500]
 
 
 === Configuring the Valomnia Connector Global Element
-To use the Valomnia Connector in your Mule application, you must configure a global Valomnia element that can be used by all the Valomnia connectors in the application (read more about global elements).
+To use the Valomnia Connector in your Mule application, you must configure a global Valomnia element that can be used by          all the Valomnia connectors in the application (read more about global elements).
 
 To create a global Valomnia configuration:
 
