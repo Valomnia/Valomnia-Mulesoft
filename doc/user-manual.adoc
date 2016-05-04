@@ -16,9 +16,9 @@ The Valomnia Connector facilitates connections between Mule integration and Valo
 === Prerequisites
 
 This document assumes you are familiar with Mule, http://www.mulesoft.org/documentation/display/current/Anypoint+Connectors[Anypoint Connectors],
-and http://www.mulesoft.org/documentation/display/current/Anypoint+Studio+Essentials[Anypoint Studio Essentials]. To increase your familiarity with Studio,
+and http://www.mulesoft.org/documentation/display/current/Anypoint+Studio+Essentials[Anypoint Studio Essentials]. To increase your  familiarity with Studio,
 consider completing one or more http://www.mulesoft.org/documentation/display/current/Anypoint+Connector+Tutorial[Anypoint Studio Tutorials]. Further,
-this page assumes that you have a basic understanding of http://www.mulesoft.org/documentation/display/current/Elements+in+a+Mule+Flow[Mule flows] and
+this page assumes that you have  a basic understanding of http://www.mulesoft.org/documentation/display/current/Elements+in+a+Mule+Flow[Mule flows] and
 http://www.mulesoft.org/documentation/display/current/Global+Elements[Mule Global Elements].
 
 This document describes implementation examples within the context of Anypoint Studio, Mule ESB’s graphical user interface, and, in parallel,
