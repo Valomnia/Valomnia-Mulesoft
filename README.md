@@ -8,11 +8,12 @@ For information about usage and installation you can check our documentation at 
 
 #Connection Management
 
+
 1.The easiest way to test the ValomniaConnector is to use the Connection  configuration.
 
 2.Drop a HTTP connector, after that drop the  Valomnia Connector, add a new Global configuration.
 
-3.enter your Valomnia Username and Valomnia Password and  Valomnia   API  BaseUrl 
+3.enter your Valomnia Username and Valomnia Password and  Valomnia   API  BaseUrl
 
 .
 4.click in Test Connectivity, if everything is OK, Anypoint Studio will show you that the Test Connection was successfull.
