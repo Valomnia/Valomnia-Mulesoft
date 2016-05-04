@@ -13,7 +13,7 @@ For information about usage and installation you can check our documentation at 
 
 2.Drop a HTTP connector, after that drop the  Valomnia Connector, add a new Global configuration.
 
-3.enter your Valomnia Username and Valomnia Password and  Valomnia   API  BaseUrl
+3.enter your Valomnia Username and Valomnia Password and  Valomnia API BaseUrl
 
 . 
 
