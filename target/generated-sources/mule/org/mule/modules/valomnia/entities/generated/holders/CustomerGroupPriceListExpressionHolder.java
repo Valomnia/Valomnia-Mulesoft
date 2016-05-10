@@ -4,7 +4,7 @@ package org.mule.modules.valomnia.entities.generated.holders;
 import javax.annotation.Generated;
 
 @SuppressWarnings("all")
-@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-05-10T10:44:20+01:00", comments = "Build UNNAMED.2762.e3b1307")
+@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-05-10T10:57:41+01:00", comments = "Build UNNAMED.2762.e3b1307")
 public class CustomerGroupPriceListExpressionHolder {
 
     protected Object id;

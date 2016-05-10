@@ -41,7 +41,7 @@ import org.mule.modules.valomnia.generated.pooling.DevkitGenericKeyedObjectPool;
  * 
  */
 @SuppressWarnings("all")
-@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-05-10T10:44:20+01:00", comments = "Build UNNAMED.2762.e3b1307")
+@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-05-10T10:57:41+01:00", comments = "Build UNNAMED.2762.e3b1307")
 public class ValomniaConnectorConfigConnectionManagementConnectionManager
     extends ExpressionEvaluatorSupport
     implements MetadataAware, MuleContextAware, ProcessAdapter<ValomniaConnectorConnectionManagementAdapter> , Capabilities, Disposable, Initialisable, Testable, ConnectionManagementConnectionManager<ConnectionManagementConfigValomniaConnectorConnectionKey, ValomniaConnectorConnectionManagementAdapter, ConnectorConfig>
