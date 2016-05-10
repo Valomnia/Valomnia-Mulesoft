@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><feature id="org.mule.tooling.ui.extension.valomnia-connector.3.5.0" label="Valomnia Connector (Mule 3.5.0+)" provider-name="Mulesoft, Inc." version="1.0.0.201605101330"><license>ï»¿About MuleSoft Certified Connectors
+
+MuleSoft Certified Connectors are developed by MuleSoftâ€™s partners and developer community. These connectors have been reviewed and certified by MuleSoft. To purchase the [Connector Name] Connector or to receive assistance or support for it, please contact [Partner Name] directly at [Contact Information]. MuleSoft disclaims any support obligation for MuleSoft Certified Connectors.
+
+By installing this connector, you consent to MuleSoft sharing your contact information with the developer of this connector so that you can receive more information about it directly from the developer.</license><plugin download-size="0" id="org.mule.tooling.ui.contribution.valomnia.3.5.0" install-size="0" unpack="true" version="1.0.0.201605101330"/></feature>
