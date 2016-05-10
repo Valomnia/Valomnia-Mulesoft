@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mule.modules</groupId>
 	<artifactId>valomnia-connector</artifactId>
-	<version>1.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-module</packaging>
 	<name>Mule Valomnia Anypoint Connector</name>
 
@@ -132,6 +132,5 @@
 		<developerConnection>scm:git:git@github.com:mulesoft/valomia.git</developerConnection>
 		<url>http://github.com/mulesoft/valomnia.git</url>
 	  
-    <tag>1.0</tag>
   </scm>
 </project>
