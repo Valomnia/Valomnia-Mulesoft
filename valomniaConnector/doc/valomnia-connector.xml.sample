@@ -1,3 +1,0 @@
-<!-- BEGIN_INCLUDE(valomnia:greet) -->
-    <valomnia:greet config-ref="" friend="#[map-payload:friend]" />
-<!-- END_INCLUDE(valomnia:greet) -->
