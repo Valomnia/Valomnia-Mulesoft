@@ -25,7 +25,7 @@ public class SaveCustomerCategoryTestCases extends AbstractTestCase<ValomniaConn
     @Test
     public void verify() {
         java.lang.String expected1 = "Success Updated";
-        java.lang.String expected2 = "Success created";
+        java.lang.String  expected2 = "Success created";
         CustomerCategory obj = new CustomerCategory();
 
         boolean exist = false;

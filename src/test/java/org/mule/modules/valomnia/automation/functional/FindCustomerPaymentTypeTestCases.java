@@ -21,10 +21,10 @@ public class FindCustomerPaymentTypeTestCases extends AbstractTestCase<ValomniaC
             
             
             
-            assertNotNull( getConnector().findCustomerPaymentType());
+            assertNotNull( getConnector().findCustomersPaymentType());
             
 
-            assertTrue(getConnector().findCustomerPaymentType().size() > 0);
+            assertTrue(getConnector().findCustomersPaymentType().size() > 0);
 
     }
 }

@@ -1,0 +1,2665 @@
+{
+  "minMuleVersion": "3.5.0",
+  "requiresEntitlement": false,
+  "requiresEnterpriseLicense": false,
+  "configs": [
+    {
+      "configElementName": "config",
+      "attributes": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "username",
+          "description": "a username"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "password",
+          "description": "a password"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "baseUrl"
+        }
+      ],
+      "javaName": "ConnectorConfig",
+      "friendlyName": "Configuration",
+      "type": "ConnectionManagementConfig"
+    }
+  ],
+  "attributes": [],
+  "processors": [
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-items   config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItem\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Item\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "List of all the Items"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItems",
+      "friendlyName": "Find items",
+      "description": "Find all Items for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items}",
+      "xsdName": "find-items"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomer\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Customer\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomers",
+      "friendlyName": "Find customers",
+      "description": "Find all Customers for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers}",
+      "xsdName": "find-customers"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-attributs config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cAttribute\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Attribute\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Attributs"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findAttributs",
+      "friendlyName": "Find attributs",
+      "description": "Find all Attributs for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-attributs}",
+      "xsdName": "find-attributs"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-items-attribute config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItemAttribute\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.ItemAttribute\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Items Attribute"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItemsAttribute",
+      "friendlyName": "Find items attribute",
+      "description": "Find all Items Attribute for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-attribute}",
+      "xsdName": "find-items-attribute"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-orders config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cOrder\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Order\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Orders"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findOrders",
+      "friendlyName": "Find orders",
+      "description": "Find all Items Orders for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders}",
+      "xsdName": "find-orders"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-items-group config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItemGroup\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.ItemGroup\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Items  Group"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItemsGroup",
+      "friendlyName": "Find items group",
+      "description": "Find all Items Group for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-group}",
+      "xsdName": "find-items-group"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-items-group-assign config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItemGroupAssign\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.ItemGroupAssign\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Items Group Assign"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItemsGroupAssign",
+      "friendlyName": "Find items group assign",
+      "description": "Find all Items Group Assign for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-group-assign}",
+      "xsdName": "find-items-group-assign"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-units config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cUnit\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Unit\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Units"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findUnits",
+      "friendlyName": "Find units",
+      "description": "Find all Units for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-units}",
+      "xsdName": "find-units"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-item-units   config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItemUnit\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.ItemUnit\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Item Units"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItemUnits",
+      "friendlyName": "Find item units",
+      "description": "Find all Item Units for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-item-units}",
+      "xsdName": "find-item-units"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-tax-types   config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cTaxType\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.TaxType\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the TaxType"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findTaxTypes",
+      "friendlyName": "Find tax types",
+      "description": "Find all Tax Type for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-tax-types}",
+      "xsdName": "find-tax-types"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-tax-lists config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cTaxList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.TaxList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the TaxList"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findTaxLists",
+      "friendlyName": "Find tax lists",
+      "description": "Find all TaxLists for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-tax-lists}",
+      "xsdName": "find-tax-lists"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-taxs config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cTax\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Tax\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Taxs"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findTaxs",
+      "friendlyName": "Find taxs",
+      "description": "Find all Taxs for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-taxs}",
+      "xsdName": "find-taxs"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-price-lists config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cPriceList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.PriceList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Price Lists"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findPriceLists",
+      "friendlyName": "Find price lists",
+      "description": "Find all Price Lists for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-price-lists}",
+      "xsdName": "find-price-lists"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-prices config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cPrice\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Price\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Prices"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findPrices",
+      "friendlyName": "Find prices",
+      "description": "Find all Prices for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-prices}",
+      "xsdName": "find-prices"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cOrderDetail\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.OrderDetail\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Orders Detail"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findOrdersDetail",
+      "friendlyName": "Find orders detail",
+      "description": "Find all Orders Detail for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-detail}",
+      "xsdName": "find-orders-detail"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-category config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerCategory\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerCategory\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Category"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersCategory",
+      "friendlyName": "Find customers category",
+      "description": "Find all Customers Category for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category}",
+      "xsdName": "find-customers-category"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-contacts  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cContact\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Contact\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Contacts"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findContacts",
+      "friendlyName": "Find contacts",
+      "description": "Find all Contacts  for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-contacts}",
+      "xsdName": "find-contacts"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-group config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerGroup\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerGroup\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Group"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersGroup",
+      "friendlyName": "Find customers group",
+      "description": "Find all Customers Group for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group}",
+      "xsdName": "find-customers-group"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-group-assign config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerGroupAssign\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerGroupAssign\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Group Assign"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersGroupAssign",
+      "friendlyName": "Find customers group assign",
+      "description": "Find all Customers Group Assign for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-assign}",
+      "xsdName": "find-customers-group-assign"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-group-price-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerGroupPriceList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerGroupPriceList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Group  Price List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersGroupPriceList",
+      "friendlyName": "Find customers group price list",
+      "description": "Find all Customers Group Price List for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-price-list}",
+      "xsdName": "find-customers-group-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-group-tax-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerGroupTaxList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerGroupTaxList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Group Tax List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersGroupTaxList",
+      "friendlyName": "Find customers group tax list",
+      "description": "Find all Customers Group Tax List for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-tax-list}",
+      "xsdName": "find-customers-group-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-category-price-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerCategoryPriceList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerCategoryPriceList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Category Price List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersCategoryPriceList",
+      "friendlyName": "Find customers category price list",
+      "description": "Find all Customers Category Price List for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category-price-list}",
+      "xsdName": "find-customers-category-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-category-price-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerCategoryTaxList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerCategoryTaxList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Category Tax List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersCategoryTaxList",
+      "friendlyName": "Find customers category tax list",
+      "description": "Find all Customers Category  Tax List for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category-tax-list}",
+      "xsdName": "find-customers-category-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-payment-type config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerPaymentType\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerPaymentType\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers  Payment Type"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersPaymentType",
+      "friendlyName": "Find customers payment type",
+      "description": "Find all Customers Payment Type for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-payment-type}",
+      "xsdName": "find-customers-payment-type"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-price-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerPriceList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerPriceList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Price List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersPriceList",
+      "friendlyName": "Find customers price list",
+      "description": "Find all Customers Price List  for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-price-list}",
+      "xsdName": "find-customers-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-tax-list config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerTaxList\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerTaxList\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Customers Tax List"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersTaxList",
+      "friendlyName": "Find customers tax list",
+      "description": "Find all Customers Tax list for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-tax-list}",
+      "xsdName": "find-customers-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-ware-houses config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cWareHouse\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.WareHouse\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the WareHouses"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findWareHouses",
+      "friendlyName": "Find ware houses",
+      "description": "Find all WareHouses for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-ware-houses}",
+      "xsdName": "find-ware-houses"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-ware-house-stocks config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cWareHouseStock\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.WareHouseStock\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the WareHouses Stocks"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findWareHouseStocks",
+      "friendlyName": "Find ware house stocks",
+      "description": "Find all WareHouses Stocks for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-ware-house-stock}",
+      "xsdName": "find-ware-house-stocks"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-orders-details config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cOrderDetail\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.OrderDetail\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Orders Details"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findOrdersDetails",
+      "friendlyName": "Find orders details",
+      "description": "Find all Orders Details for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-details}",
+      "xsdName": "find-orders-details"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-employee-groups config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cEmployeeGroup\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.EmployeeGroup\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Employee Group"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findEmployeeGroups",
+      "friendlyName": "Find employee groups",
+      "description": "Find all Employee Groups  for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-employee-groups}",
+      "xsdName": "find-employee-groups"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-employees config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cEmployee\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Employee\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Employee"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findEmployees",
+      "friendlyName": "Find employees",
+      "description": "Find all Employees  for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-employees}",
+      "xsdName": "find-employees"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-users config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cUser\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.User\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the Users"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findUsers",
+      "friendlyName": "Find users",
+      "description": "Find all Users for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-users}",
+      "xsdName": "find-users"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-authority config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cAuthority\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Authority\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Authority"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findAuthority",
+      "friendlyName": "Find authority",
+      "description": "Find all Authority for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-authority}",
+      "xsdName": "find-authority"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-users-authority config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cUserAuthority\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.UserAuthority\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the   User Authority"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findUsersAuthority",
+      "friendlyName": "Find users authority",
+      "description": "Find all  User Authority for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-users-authority}",
+      "xsdName": "find-users-authority"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-loadings config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cLoading\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.Loading\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Loadings"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findLoadings",
+      "friendlyName": "Find loadings",
+      "description": "Find all Loadings for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-loadings}",
+      "xsdName": "find-loadings"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-attributes-value config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cAttributeValue\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.AttributeValue\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Attributes Value"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findAttributesValue",
+      "friendlyName": "Find attributes value",
+      "description": "Find all Attributes Value for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-attributes-value}",
+      "xsdName": "find-attributes-value"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-loading-details config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cLoadingDetails\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.LoadingDetails\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Loading Details"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findLoadingDetails",
+      "friendlyName": "Find loading details",
+      "description": "Find all Loading Details for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-loading-details}",
+      "xsdName": "find-loading-details"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-customers-employee config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cCustomerEmployee\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.CustomerEmployee\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Loadings"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findCustomersEmployee",
+      "friendlyName": "Find customers employee",
+      "description": "Find all Customers Employee for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-employee}",
+      "xsdName": "find-customers-employee"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-orders-payment config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cOrderPayment\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.OrderPayment\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Orders Payment"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findOrdersPayment",
+      "friendlyName": "Find orders payment",
+      "description": "Find all Orders Payment  for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-payment}",
+      "xsdName": "find-orders-payment"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:find-items-category config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "ArrayList\u003cItemCategory\u003e",
+        "fullQualifiedJavaTypeName": "java.util.ArrayList\u003corg.mule.modules.valomnia.entities.ItemCategory\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "a List of all the  Items Category"
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "findItemsCategory",
+      "friendlyName": "Find items category",
+      "description": "Find all Items Category for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-category}",
+      "xsdName": "find-items-category"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Item",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Item",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Item",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItem",
+      "friendlyName": "Save item",
+      "description": "Save Or Update an Item entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item}",
+      "xsdName": "save-item"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-category-price-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerCategoryPriceList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerCategoryPriceList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerCategoryPriceList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerCategoryPriceList",
+      "friendlyName": "Save customer category price list",
+      "description": "Save Or Update an CustomerCategoryPriceList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category-price-list}",
+      "xsdName": "save-customer-category-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-category  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerCategory",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerCategory",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerCategory",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerCategory",
+      "friendlyName": "Save customer category",
+      "description": "Save Or Update an CustomerCategory entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category}",
+      "xsdName": "save-customer-category"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-price-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "PriceList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.PriceList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.PriceList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "savePriceList",
+      "friendlyName": "Save price list",
+      "description": "Save Or Update an PriceList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-price-list}",
+      "xsdName": "save-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-category-tax-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerCategoryTaxList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerCategoryTaxList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerCategoryTaxList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerCategoryTaxList",
+      "friendlyName": "Save customer category tax list",
+      "description": "Save Or Update an CustomerCategoryTaxList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-category-tax-list}",
+      "xsdName": "save-customer-category-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item-category  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "ItemCategory",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.ItemCategory",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.ItemCategory",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItemCategory",
+      "friendlyName": "Save item category",
+      "description": "Save Or Update an ItemCategory entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-category}",
+      "xsdName": "save-item-category"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-tax-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "TaxList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.TaxList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.TaxList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveTaxList",
+      "friendlyName": "Save tax list",
+      "description": "Save Or Update an TaxList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax-list}",
+      "xsdName": "save-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-contact  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Contact",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Contact",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Contact",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveContact",
+      "friendlyName": "Save contact",
+      "description": "Save Or Update an Contact entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-contact}",
+      "xsdName": "save-contact"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Customer",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Customer",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Customer",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomer",
+      "friendlyName": "Save customer",
+      "description": "Save Or Update an Customer entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer}",
+      "xsdName": "save-customer"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item-attribute  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "ItemAttribute",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.ItemAttribute",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.ItemAttribute",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItemAttribute",
+      "friendlyName": "Save item attribute",
+      "description": "Save Or Update an ItemAttribute entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-attribute}",
+      "xsdName": "save-item-attribute"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-attribute config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Attribute",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Attribute",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Attribute",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveAttribute",
+      "friendlyName": "Save attribute",
+      "description": "Save Or Update an Attribute entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-attribute}",
+      "xsdName": "save-attribute"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-employee config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Employee",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Employee",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Employee",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveEmployee",
+      "friendlyName": "Save employee",
+      "description": "Save Or Update an Employee entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-employee}",
+      "xsdName": "save-employee"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-group  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerGroup",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerGroup",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerGroup",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerGroup",
+      "friendlyName": "Save customer group",
+      "description": "Save Or Update an CustomerGroup entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group}",
+      "xsdName": "save-customer-group"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-employee  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerEmployee",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerEmployee",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerEmployee",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerEmployee",
+      "friendlyName": "Save customer employee",
+      "description": "Save Or Update an CustomerEmployee entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-employee}",
+      "xsdName": "save-customer-employee"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-group-assign  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerGroupAssign",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerGroupAssign",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerGroupAssign",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerGroupAssign",
+      "friendlyName": "Save customer group assign",
+      "description": "Save Or Update an CustomerGroupAssign entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-assign}",
+      "xsdName": "save-customer-group-assign"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-group-price-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerGroupPriceList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerGroupPriceList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerGroupPriceList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerGroupPriceList",
+      "friendlyName": "Save customer group price list",
+      "description": "Save Or Update an CustomerGroupPriceList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-price-list}",
+      "xsdName": "save-customer-group-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-user-authority  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "UserAuthority",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.UserAuthority",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.UserAuthority",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveUserAuthority",
+      "friendlyName": "Save user authority",
+      "description": "Save Or Update an UserAuthority entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-user-authority}",
+      "xsdName": "save-user-authority"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-authority  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Authority",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Authority",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Authority",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveAuthority",
+      "friendlyName": "Save authority",
+      "description": "Save Or Update an Authority entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-authority}",
+      "xsdName": "save-authority"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-group-tax-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerGroupTaxList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerGroupTaxList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerGroupTaxList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerGroupTaxList",
+      "friendlyName": "Save customer group tax list",
+      "description": "Save Or Update an CustomerGroupTaxList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-group-tax-list}",
+      "xsdName": "save-customer-group-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-payment-type  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerPaymentType",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerPaymentType",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerPaymentType",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerPaymentType",
+      "friendlyName": "Save customer payment type",
+      "description": "Save Or Update an CustomerPaymentType entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-payment-type}",
+      "xsdName": "save-customer-payment-type"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-price-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerPriceList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerPriceList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerPriceList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerPriceList",
+      "friendlyName": "Save customer price list",
+      "description": "Save Or Update an CustomerPriceList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-price-list}",
+      "xsdName": "save-customer-price-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-customer-tax-list  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "CustomerTaxList",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.CustomerTaxList",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.CustomerTaxList",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveCustomerTaxList",
+      "friendlyName": "Save customer tax list",
+      "description": "Save Or Update an CustomerTaxList entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-customer-tax-list}",
+      "xsdName": "save-customer-tax-list"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-employee-group  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "EmployeeGroup",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.EmployeeGroup",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.EmployeeGroup",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveEmployeeGroup",
+      "friendlyName": "Save employee group",
+      "description": "Save Or Update an EmployeeGroup entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-employee-group}",
+      "xsdName": "save-employee-group"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-tax  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Tax",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Tax",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Tax",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveTax",
+      "friendlyName": "Save tax",
+      "description": "Save Or Update an Tax entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax}",
+      "xsdName": "save-tax"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item-group  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "ItemGroup",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.ItemGroup",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.ItemGroup",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItemGroup",
+      "friendlyName": "Save item group",
+      "description": "Save Or Update an ItemGroup entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-group}",
+      "xsdName": "save-item-group"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item-group-assign  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "ItemGroupAssign",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.ItemGroupAssign",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.ItemGroupAssign",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItemGroupAssign",
+      "friendlyName": "Save item group assign",
+      "description": "Save Or Update an ItemGroupAssign entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-group-assign}",
+      "xsdName": "save-item-group-assign"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-attribute-value config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "AttributeValue",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.AttributeValue",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.AttributeValue",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveAttributeValue",
+      "friendlyName": "Save attribute value",
+      "description": "Save Or Update an AttributeValue entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-attribute-value}",
+      "xsdName": "save-attribute-value"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-item-unit config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "ItemUnit",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.ItemUnit",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.ItemUnit",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveItemUnit",
+      "friendlyName": "Save item unit",
+      "description": "Save Or Update an ItemUnit entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-item-unit}",
+      "xsdName": "save-item-unit"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-loading config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Loading",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Loading",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Loading",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveLoading",
+      "friendlyName": "Save loading",
+      "description": "Save Or Update an Loading entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-loading}",
+      "xsdName": "save-loading"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-loading-details config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "LoadingDetails",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.LoadingDetails",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.LoadingDetails",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveLoadingDetails",
+      "friendlyName": "Save loading details",
+      "description": "Save Or Update an LoadingDetails entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-loading-details}",
+      "xsdName": "save-loading-details"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-order-detail config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "OrderDetail",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.OrderDetail",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.OrderDetail",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveOrderDetail",
+      "friendlyName": "Save order detail",
+      "description": "Save Or Update an OrderDetail entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order-detail}",
+      "xsdName": "save-order-detail"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-order-payment config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "OrderPayment",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.OrderPayment",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.OrderPayment",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveOrderPayment",
+      "friendlyName": "Save order payment",
+      "description": "Save Or Update an OrderPayment entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order-payment}",
+      "xsdName": "save-order-payment"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-price config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Price",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Price",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Price",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "savePrice",
+      "friendlyName": "Save price",
+      "description": "Save Or Update an Price entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-price}",
+      "xsdName": "save-price"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-order config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Object",
+          "fullQualifiedJavaTypeName": "java.lang.Object",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "java.lang.Object",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveOrder",
+      "friendlyName": "Save order",
+      "description": "Save Or Update an Order entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-order}",
+      "xsdName": "save-order"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-tax-type  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "TaxType",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.TaxType",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.TaxType",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveTaxType",
+      "friendlyName": "Save tax type",
+      "description": "Save Or Update an TaxType entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-tax-type}",
+      "xsdName": "save-tax-type"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-unit  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Unit",
+          "fullQualifiedJavaTypeName": "org.mule.modules.valomnia.entities.Unit",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": true,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.modules.valomnia.entities.Unit",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveUnit",
+      "friendlyName": "Save unit",
+      "description": "Save Or Update an Unit entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-unit}",
+      "xsdName": "save-unit"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-order  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\"/\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Object",
+          "fullQualifiedJavaTypeName": "java.lang.Object",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "java.lang.Object",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveUser",
+      "friendlyName": "Save user",
+      "description": "Save Or Update an User entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-user}",
+      "xsdName": "save-user"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-ware-house  config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Object",
+          "fullQualifiedJavaTypeName": "java.lang.Object",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "java.lang.Object",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveWareHouse",
+      "friendlyName": "Save ware house",
+      "description": "Save Or Update an WareHouse entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-ware-house}",
+      "xsdName": "save-ware-house"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [
+        "\u003cvalomnia:save-ware-house-stock   config-ref\u003d\"Valomnia__Configuration\" doc:name\u003d\"Valomnia\" /\u003e"
+      ],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "response String for Valomnia API"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "Object",
+          "fullQualifiedJavaTypeName": "java.lang.Object",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "java.lang.Object",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "obj",
+          "description": "the input object saved or updated"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "saveWareHouseStock",
+      "friendlyName": "Save ware house stock",
+      "description": "Save Or Update an WareHouseStock entity for the connected account\n{ @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:save-ware-house-stock}",
+      "xsdName": "save-ware-house-stock"
+    }
+  ],
+  "filters": [],
+  "transformers": [],
+  "sources": [],
+  "javaName": "ValomniaConnector",
+  "friendlyName": "Valomnia",
+  "xsdName": "valomnia"
+}

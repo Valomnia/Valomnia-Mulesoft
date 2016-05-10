@@ -32,7 +32,7 @@ public class SaveCustomerPaymentTypeTestCases extends AbstractTestCase<ValomniaC
 
         ArrayList<CustomerPaymentType> list = null;
         try {
-            list = getConnector().findCustomerPaymentType();
+            list = getConnector().findCustomersPaymentType();
         } catch (Exception e) {
 
             e.printStackTrace();

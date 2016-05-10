@@ -19,10 +19,10 @@ public class FindCustomerTaxListTestCases extends AbstractTestCase<ValomniaConne
             
             
             
-            assertNotNull( getConnector().findCustomerTaxList());
+            assertNotNull( getConnector().findCustomersTaxList());
             
 
-            assertTrue(getConnector().findCustomerTaxList().size() > 0);
+            assertTrue(getConnector().findCustomersTaxList().size() > 0);
 
     }
 }

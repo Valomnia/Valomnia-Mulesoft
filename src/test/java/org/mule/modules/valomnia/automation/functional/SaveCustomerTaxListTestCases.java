@@ -31,7 +31,7 @@ public class SaveCustomerTaxListTestCases extends AbstractTestCase<ValomniaConne
 
         ArrayList<CustomerTaxList> list = null;
         try {
-            list = getConnector().findCustomerTaxList();
+            list = getConnector().findCustomersTaxList();
         } catch (Exception e) {
 
             e.printStackTrace();
