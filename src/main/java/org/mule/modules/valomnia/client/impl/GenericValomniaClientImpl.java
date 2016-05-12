@@ -111,7 +111,7 @@ public class GenericValomniaClientImpl<T> extends AbstractValomniaClient
      * @param response
      *            returned by the invocation
      * @return List of entities , null if not found, or an Exception if something bad happened
-     * @throws Exception
+     * @throws Exception 
      */
 
     public ArrayList<T> processResponse(final HttpResponse response)

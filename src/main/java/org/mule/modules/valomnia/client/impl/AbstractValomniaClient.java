@@ -77,7 +77,7 @@ public abstract class AbstractValomniaClient {
 					response.getEntity().getContent()));
 			line = rd.readLine();
 			if (line != null) {
-				line = new String(line.getBytes("UTF-8"), "UTF-8");
+			    line = new String(line.getBytes("ISO-8859-15"), "UTF-8");
 			}
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -165,7 +165,7 @@ public abstract class AbstractValomniaClient {
 	/**
 	 * Parse JAVA Map to String Json-formated
 	 *
-	 * @param Map
+	 * @param map
 	 *            to parse
 	 * @param name
 	 *            for specify the map name

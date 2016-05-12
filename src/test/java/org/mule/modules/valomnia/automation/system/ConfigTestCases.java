@@ -31,7 +31,7 @@ public class ConfigTestCases {
         password = credentials.getProperty("config.password");
         baseUrl = credentials.getProperty("config.baseUrl");
         client = new ConnectorConfig();
-        client.setUser(username);
+        client.setUsername(username);
         client.setPassword(password);
         client.setBaseUrl(baseUrl);
 

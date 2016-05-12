@@ -7,9 +7,9 @@
 #Pre-requisites
 
 
-* Anypoint Studio with Mule ESB 3.8 Runtime.
+* Anypoint Studio with Mule ESB 3.7 Runtime.
 
-* Anypoint Valomnia v1.0.0
+* Anypoint Valomnia V1.0.0
 
 * Valomnia account
 
@@ -19,7 +19,7 @@
 
 ###Preparation
 
-1.Import this DEMO in Anypoint Studio going to File → Import…​ → Anypoint Studio Project from External Localtion, select the demo project root and choose as server runtime Mule Server 3.8.x EE.
+1.Import this DEMO in Anypoint Studio going to File → Import…​ → Anypoint Studio Project from External Localtion, select the demo project root and choose the Server Runtime as Mule Server 3.7.0 CE or EE
 
 2.Once imported, in src/main/app you will find mule-app.properties file, this contains all the placeholders for the required properties to make the DEMO work. Open it. It will be like the following:
 

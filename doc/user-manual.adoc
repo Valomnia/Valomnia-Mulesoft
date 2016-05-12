@@ -29,7 +29,7 @@ includes configuration details for doing the same in the XML Editor.
 [width="100%", options="header"]
 |=======
 |Application/Service |Version
-|Mule Runtime |3.8.0 and later
+|Mule Runtime |3.7.0 and later
 |Valomnia | Valomnia Account
 |=======
 

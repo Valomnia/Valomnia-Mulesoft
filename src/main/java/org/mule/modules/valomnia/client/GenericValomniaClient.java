@@ -16,7 +16,7 @@ public interface GenericValomniaClient<T> {
 	 * Get all the elements
 	 * 
 	 * @return List of all the elements
-	 * @throws Exception
+	 * 
 	 */
 
 	ArrayList<T> getAll();

@@ -51,7 +51,13 @@ import org.mule.modules.valomnia.entities.UserAuthority;
 import org.mule.modules.valomnia.entities.WareHouse;
 import org.mule.modules.valomnia.entities.WareHouseStock;
 
-@Connector(name = "valomnia", friendlyName = "Valomnia")
+/**
+ * Mule Connector for Valomnia
+ * 
+ * @author MuleSoft, Inc.
+ */
+
+@Connector(name = "valomnia", friendlyName = "Valomnia Connector", minMuleVersion="3.7.0")
 public class ValomniaConnector {
 
     @Config
@@ -71,11 +77,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items}
      *
      * @return List of all the Items
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<Item> findItems() throws Exception {
+    public ArrayList<Item> findItems() {
         return this.config.getClientProvider()
                 .getClient(Item.class)
                 .getAll();
@@ -87,11 +93,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers}
      *
      * @return a List of all the Customers
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<Customer> findCustomers() throws Exception {
+    public ArrayList<Customer> findCustomers() {
 
         return this.config.getClientProvider()
                 .getClient(Customer.class)
@@ -105,11 +111,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-attributs}
      *
      * @return a List of all the Attributs
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<Attribute> findAttributs() throws Exception {
+    public ArrayList<Attribute> findAttributs()    {
 
         return this.config.getClientProvider()
                 .getClient(Attribute.class)
@@ -124,11 +130,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-attribute}
      *
      * @return a List of all the  Items Attribute 
-     * @throws Exception
+     *  
      */
     
     @Processor
-    public ArrayList<ItemAttribute> findItemsAttribute() throws Exception {
+    public ArrayList<ItemAttribute> findItemsAttribute()    {
 
         return this.config.getClientProvider()
                 .getClient(ItemAttribute.class)
@@ -142,11 +148,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders}
      *
      * @return a List of all the Orders
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<Order> findOrders() throws Exception {
+    public ArrayList<Order> findOrders()    {
         return this.config.getClientProvider()
                 .getClient(Order.class)
                 .getAll();
@@ -158,12 +164,12 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-group}
      *
      * @return a List of all the Items  Group
-     * @throws Exception
+     *  
      */
 
 
     @Processor
-    public ArrayList<ItemGroup> findItemsGroup() throws Exception {
+    public ArrayList<ItemGroup> findItemsGroup()    {
         return this.config.getClientProvider()
                 .getClient(ItemGroup.class)
                 .getAll();
@@ -175,12 +181,12 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-group-assign}
      *
      * @return a List of all the Items Group Assign
-     * @throws Exception
+     *  
      */
     
     
     @Processor
-    public ArrayList<ItemGroupAssign> findItemsGroupAssign() throws Exception {
+    public ArrayList<ItemGroupAssign> findItemsGroupAssign()    {
         return this.config.getClientProvider()
                 .getClient(ItemGroupAssign.class)
                 .getAll();
@@ -192,11 +198,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-units}
      *
      * @return a List of all the Units
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<Unit> findUnits() throws Exception {
+    public ArrayList<Unit> findUnits()    {
         return this.config.getClientProvider()
                 .getClient(Unit.class)
                 .getAll();
@@ -207,11 +213,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-item-units}
      *
      * @return a List of all the Item Units
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<ItemUnit> findItemUnits() throws Exception {
+    public ArrayList<ItemUnit> findItemUnits()    {
         return this.config.getClientProvider()
                 .getClient(ItemUnit.class)
                 .getAll();
@@ -223,11 +229,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-tax-types}
      *
      * @return a List of all the TaxType
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<TaxType> findTaxTypes() throws Exception {
+    public ArrayList<TaxType> findTaxTypes()    {
         return this.config.getClientProvider()
                 .getClient(TaxType.class)
                 .getAll();
@@ -239,11 +245,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-tax-lists}
      *
      * @return a List of all the TaxList
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<TaxList> findTaxLists() throws Exception {
+    public ArrayList<TaxList> findTaxLists()    {
         return this.config.getClientProvider()
                 .getClient(TaxList.class)
                 .getAll();
@@ -254,11 +260,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-taxs}
      *
      * @return a List of all the Taxs
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<Tax> findTaxs() throws Exception {
+    public ArrayList<Tax> findTaxs()    {
         return this.config.getClientProvider()
                 .getClient(Tax.class)
                 .getAll();
@@ -271,10 +277,10 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-price-lists}
      *
      * @return a List of all the Price Lists
-     * @throws Exception
+     *  
      */
     @Processor
-    public ArrayList<PriceList> findPriceLists() throws Exception {
+    public ArrayList<PriceList> findPriceLists()    {
         return this.config.getClientProvider()
                 .getClient(PriceList.class)
                 .getAll();
@@ -287,11 +293,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-prices}
      *
      * @return a List of all the Prices
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<Price> findPrices() throws Exception {
+    public ArrayList<Price> findPrices()    {
         return this.config.getClientProvider()
                 .getClient(Price.class)
                 .getAll();
@@ -304,11 +310,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-detail}
      *
      * @return a List of all the Orders Detail
-     * @throws Exception
+     *   
      */
     
     @Processor
-    public ArrayList<OrderDetail> findOrdersDetail() throws Exception {
+    public ArrayList<OrderDetail> findOrdersDetail()    {
         return this.config.getClientProvider()
                 .getClient(OrderDetail.class)
                 .getAll();
@@ -320,10 +326,10 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category}
      *
      * @return a List of all the Customers Category
-     * @throws Exception
+     * 
      */
     @Processor
-    public ArrayList<CustomerCategory> findCustomersCategory() throws Exception {
+    public ArrayList<CustomerCategory> findCustomersCategory()    {
         return this.config.getClientProvider()
                 .getClient(CustomerCategory.class)
                 .getAll();
@@ -336,10 +342,10 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-contacts}
      *
      * @return a List of all the Contacts
-     * @throws Exception
+     * 
      */
     @Processor
-    public ArrayList<Contact> findContacts() throws Exception {
+    public ArrayList<Contact> findContacts()    {
         return this.config.getClientProvider()
                 .getClient(Contact.class)
                 .getAll();
@@ -352,10 +358,10 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group}
      *
      * @return a List of all the Customers Group
-     * @throws Exception
+     *   
      */
     @Processor
-    public ArrayList<CustomerGroup> findCustomersGroup() throws Exception {
+    public ArrayList<CustomerGroup> findCustomersGroup()    {
         return this.config.getClientProvider()
                 .getClient(CustomerGroup.class)
                 .getAll();
@@ -367,11 +373,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-assign}
      *
      * @return a List of all the Customers Group Assign
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<CustomerGroupAssign> findCustomersGroupAssign() throws Exception {
+    public ArrayList<CustomerGroupAssign> findCustomersGroupAssign()    {
         return this.config.getClientProvider()
                 .getClient(CustomerGroupAssign.class)
                 .getAll();
@@ -384,11 +390,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-price-list}
      *
      * @return a List of all the Customers Group  Price List
-     * @throws Exception
+     *  
      */
     @Processor
     public ArrayList<CustomerGroupPriceList> findCustomersGroupPriceList()
-            throws Exception {
+               {
         return this.config.getClientProvider()
                 .getClient(CustomerGroupPriceList.class)
                 .getAll();
@@ -402,11 +408,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-group-tax-list}
      *
      * @return a List of all the Customers Group Tax List
-     * @throws Exception
+     *   
      */
     @Processor
     public ArrayList<CustomerGroupTaxList> findCustomersGroupTaxList()
-            throws Exception {
+               {
         return this.config.getClientProvider()
                 .getClient(CustomerGroupTaxList.class)
                 .getAll();
@@ -418,12 +424,12 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category-price-list}
      *
      * @return a List of all the Customers Category Price List
-     * @throws Exception
+     *   
      */
 
     @Processor
     public ArrayList<CustomerCategoryPriceList> findCustomersCategoryPriceList()
-            throws Exception {
+               {
         return this.config.getClientProvider()
                 .getClient(CustomerCategoryPriceList.class)
                 .getAll();
@@ -435,12 +441,12 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-category-tax-list}
      *
      * @return a List of all the Customers Category Tax List
-     * @throws Exception
+     *  
      */
 
     @Processor
     public ArrayList<CustomerCategoryTaxList> findCustomersCategoryTaxList()
-            throws Exception {
+               {
         return this.config.getClientProvider()
                 .getClient(CustomerCategoryTaxList.class)
                 .getAll();
@@ -452,11 +458,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-payment-type}
      *
      * @return a List of all the Customers  Payment Type
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<CustomerPaymentType> findCustomersPaymentType() throws Exception {
+    public ArrayList<CustomerPaymentType> findCustomersPaymentType()    {
         return this.config.getClientProvider()
                 .getClient(CustomerPaymentType.class)
                 .getAll();
@@ -468,11 +474,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-price-list}
      *
      * @return a List of all the Customers Price List
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<CustomerPriceList> findCustomersPriceList() throws Exception {
+    public ArrayList<CustomerPriceList> findCustomersPriceList()    {
         return this.config.getClientProvider()
                 .getClient(CustomerPriceList.class)
                 .getAll();
@@ -484,11 +490,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-tax-list}
      *
      * @return a List of all the Customers Tax List
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<CustomerTaxList> findCustomersTaxList() throws Exception {
+    public ArrayList<CustomerTaxList> findCustomersTaxList()    {
         return this.config.getClientProvider()
                 .getClient(CustomerTaxList.class)
                 .getAll();
@@ -500,11 +506,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-ware-houses}
      *
      * @return a List of all the WareHouses
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<WareHouse> findWareHouses() throws Exception {
+    public ArrayList<WareHouse> findWareHouses()    {
         return this.config.getClientProvider()
                 .getClient(WareHouse.class)
                 .getAll();
@@ -516,31 +522,19 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-ware-house-stock}
      *
      * @return a List of all the WareHouses Stocks
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<WareHouseStock> findWareHouseStocks() throws Exception {
+    public ArrayList<WareHouseStock> findWareHouseStocks()    {
         return this.config.getClientProvider()
                 .getClient(WareHouseStock.class)
                 .getAll();
     }
 
     
-    /**
-     * Find all Orders Details for the connected account
-     *
-     * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-details}
-     *
-     * @return a List of all the Orders Details
-     * @throws Exception
-     */
-    @Processor
-    public ArrayList<OrderDetail> findOrdersDetails() throws Exception {
-        return this.config.getClientProvider()
-                .getClient(OrderDetail.class)
-                .getAll();
-    }
+    
+    
     
     /**
      * Find all Employee Groups  for the connected account
@@ -548,11 +542,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-employee-groups}
      *
      * @return a List of all the Employee Group
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<EmployeeGroup> findEmployeeGroups() throws Exception {
+    public ArrayList<EmployeeGroup> findEmployeeGroups()    {
         return this.config.getClientProvider()
                 .getClient(EmployeeGroup.class)
                 .getAll();
@@ -563,11 +557,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-employees}
      *
      * @return a List of all the Employee
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<Employee> findEmployees() throws Exception {
+    public ArrayList<Employee> findEmployees()    {
         return this.config.getClientProvider()
                 .getClient(Employee.class)
                 .getAll();
@@ -578,11 +572,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-users}
      *
      * @return a List of all the Users
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<User> findUsers() throws Exception {
+    public ArrayList<User> findUsers()    {
         return this.config.getClientProvider()
                 .getClient(User.class)
                 .getAll();
@@ -594,11 +588,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-authority}
      *
      * @return a List of all the  Authority 
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<Authority> findAuthority() throws Exception {
+    public ArrayList<Authority> findAuthority()    {
         return this.config.getClientProvider()
                 .getClient(Authority.class)
                 .getAll();
@@ -610,11 +604,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-users-authority}
      *
      * @return a List of all the   User Authority 
-     * @throws Exception
+     *  
      */
 
     @Processor
-    public ArrayList<UserAuthority> findUsersAuthority() throws Exception {
+    public ArrayList<UserAuthority> findUsersAuthority()    {
         return this.config.getClientProvider()
                 .getClient(UserAuthority.class)
                 .getAll();
@@ -626,11 +620,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-loadings}
      *
      * @return a List of all the  Loadings 
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<Loading> findLoadings() throws Exception {
+    public ArrayList<Loading> findLoadings()    {
         return this.config.getClientProvider()
                 .getClient(Loading.class)
                 .getAll();
@@ -642,13 +636,13 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-attributes-value}
      *
      * @return a List of all the  Attributes Value
-     * @throws Exception
+     *   
      */
     
     
     
     @Processor
-    public ArrayList<AttributeValue> findAttributesValue() throws Exception {
+    public ArrayList<AttributeValue> findAttributesValue()    {
         return this.config.getClientProvider()
                 .getClient(AttributeValue.class)
                 .getAll();
@@ -660,11 +654,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-loading-details}
      *
      * @return a List of all the  Loading Details
-     * @throws Exception
+     *   
      */
 
     @Processor
-    public ArrayList<LoadingDetails> findLoadingDetails() throws Exception {
+    public ArrayList<LoadingDetails> findLoadingDetails()    {
         return this.config.getClientProvider()
                 .getClient(LoadingDetails.class)
                 .getAll();
@@ -676,11 +670,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-customers-employee}
      *
      * @return a List of all the  Loadings 
-     * @throws Exception
+     * 
      */
 
     @Processor
-    public ArrayList<CustomerEmployee> findCustomersEmployee() throws Exception {
+    public ArrayList<CustomerEmployee> findCustomersEmployee()    {
         return this.config.getClientProvider()
                 .getClient(CustomerEmployee.class)
                 .getAll();
@@ -692,11 +686,11 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-orders-payment}
      *
      * @return a List of all the  Orders Payment
-     * @throws Exception
+     *  
      */
     
     @Processor
-    public ArrayList<OrderPayment> findOrdersPayment() throws Exception {
+    public ArrayList<OrderPayment> findOrdersPayment()    {
         return this.config.getClientProvider()
                 .getClient(OrderPayment.class)
                 .getAll();
@@ -708,12 +702,12 @@ public class ValomniaConnector {
      * { @sample.xml /valomnia-connector/doc/valomnia-connector.xml.sample valomnia:find-items-category}
      *
      * @return a List of all the  Items Category 
-     * @throws Exception
+     *  
      */
     
     
     @Processor
-    public ArrayList<ItemCategory> findItemsCategory() throws Exception {
+    public ArrayList<ItemCategory> findItemsCategory()    {
         return this.config.getClientProvider()
                 .getClient(ItemCategory.class)
                 .getAll();
