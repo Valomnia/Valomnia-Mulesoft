@@ -56,7 +56,7 @@ import org.mule.modules.valomnia.entities.WareHouseStock;
  * 
  * @author MuleSoft, Inc.
  */
-
+@RequiresEnterpriseLicense
 @Connector(name = "valomnia", friendlyName = "Valomnia Connector", minMuleVersion="3.7.0")
 public class ValomniaConnector {
 
